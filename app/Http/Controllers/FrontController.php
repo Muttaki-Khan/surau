@@ -18,6 +18,14 @@ use Session;
 
 class FrontController extends Controller
 {
+
+    public function testing(){
+      $user = User::where('id',1)->first();
+
+      $img1 = $user->img1;
+
+      return view("frontView.home.index",compact('img1','user'));
+    }
     public function index(){
       $museum_id = session('museum_id', '1');
       $is_admin = true;

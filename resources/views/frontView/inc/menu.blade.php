@@ -18,7 +18,7 @@
 				  <ul class="nav navbar-nav menu__list">
 					
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link {{$textcolor}}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle menu__link {{$textcolor}}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENGENAI KAMI <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<!-- <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -40,7 +40,7 @@
 							</ul>
 					</li>
 
-					<li class="menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a></li>
+					<li class="menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/')}}">UTAMA <span class="sr-only">(current)</span></a></li>
 
 					<!-- <li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link {{$textcolor}}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category<span class="caret"></span></a>
@@ -65,11 +65,10 @@
 								</div>
 							</ul>
 					</li> -->
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/item')}}">All ITEMS</a></li>
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/gallery')}}">Gallery</a></li>
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/exhibition')}}">Events</a></li>
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/contact')}}">contact</a></li>
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/museums')}}">Museums</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/item')}}">AKTIVITI</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/gallery')}}">VIDEO KULIAH</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/exhibition')}}">SUMBANGAN DAN BANTUAN</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/contact')}}">HUBUNGI KAMI</a></li>
 
 				  </ul>
 				</div>

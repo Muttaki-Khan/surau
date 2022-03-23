@@ -66,6 +66,9 @@ Route::post('/museums', 'FrontController@chooseMuseum')->name('museums');
 
 Route::get('/','FrontController@index');
 
+Route::get('/index','FrontController@testing');
+
+
 Route::get('/mainhome','MainHomeController@main');
 
 
