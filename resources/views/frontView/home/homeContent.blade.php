@@ -5,7 +5,7 @@
 
 
 @section('title_area')
-		Emuseum
+		Surau
 @endsection
 
 

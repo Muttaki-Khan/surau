@@ -23,7 +23,7 @@
 		<div class="col-md-3 header-left">
 
 			<!-- <h1><a href="index.html" ><img class="imglogo" id="logoID"  src="{{ asset('frontEnd') }}/images/mainlogo.png"></a></h1> -->
-			<h1><a href="" ><img class="imglogo" id="logoID"></a></h1>
+			<h1><a href=""><img class="imglogo" id="logoID"></a></h1>
 
 		</div>
 		<!-- <div class="col-md-3 Soft-header-middle {{$theme}}">
@@ -39,7 +39,7 @@
 			</form> 
 		</div> -->
 
-    <div class='col-md-3 '>
+    <!-- <div class='col-md-3 '>
         <form class='navbar-form' action="search " method="get">
           <div class='input-group'>
             <input class='form-control' type='search' name='search' placeholder='Search Name' />
@@ -52,7 +52,7 @@
           </div>
         </form>
 		
-    </div>
+    </div> -->
 
 		<!-- <div class="col-sm-3 newsright ">
 				<form action="http://127.0.0.1:8000">
@@ -76,7 +76,7 @@
 		</div>
 
 
-		<div class="col-md-3 header-right footer-bottom">
+		<div class="col-md-5 header-right footer-bottom">
 
 			<ul>
 				
@@ -98,10 +98,10 @@
 
                 @endif   
 
-				<!-- <li><a class="fb" href="https://www.facebook.com/"></a></li>
+				<li><a class="fb" href="https://www.facebook.com/"></a></li>
 				<li><a class="twi" href="https://twitter.com/"></a></li>
 				<li><a class="insta" href="https://www.instagram.com/"></a></li>
-				<li><a class="you" href="https://www.youtube.com/"></a></li> -->
+				<li><a class="you" href="https://www.youtube.com/"></a></li>
 			</ul>
 
 

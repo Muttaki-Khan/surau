@@ -3,7 +3,7 @@
 
 
 @section('title_area')
-		Emuseum
+		Surau
 @endsection
 
 @section('css_js')

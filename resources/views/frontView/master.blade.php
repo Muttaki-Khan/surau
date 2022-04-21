@@ -5,7 +5,7 @@ Author URL: http://soft-all.com/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Emuseum @yield('title_area')</title>
+<title>Surau @yield('title_area')</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

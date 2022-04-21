@@ -26,9 +26,9 @@
 									</div> -->
 									<div class="col-sm-3 multi-gd-img" style="width:100%">
 										<ul class="multi-column-dropdown" >
-											<li><a href="introduction">Introduction</a></li>
-											<li><a href="goals">Goals</a></li>
-											<li><a href="staff">Staff Directory</a></li>
+											<li><a href="introduction">Information</a></li>
+											<li><a href="goals">History</a></li>
+											<li><a href="staff">Surau Committee</a></li>
 											<li><a href="contact">Contact</a></li>
 											
 											
@@ -66,8 +66,9 @@
 							</ul>
 					</li> -->
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/item')}}">AKTIVITI</a></li>
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/gallery')}}">VIDEO KULIAH</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/video')}}">VIDEO KULIAH</a></li>
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/exhibition')}}">SUMBANGAN DAN BANTUAN</a></li>
+					<!-- <li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/member')}}">MEMBER</a></li> -->
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/contact')}}">HUBUNGI KAMI</a></li>
 
 				  </ul>
@@ -85,6 +86,7 @@
 	// document.getElementById("themeID").classList.add('<?php echo $theme; ?>');
 	//console.log('{{$logo}}');
 	document.getElementById("logoID").src='{{$logo}}';
+
 };
 </script>
 

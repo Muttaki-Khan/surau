@@ -36,7 +36,7 @@
 			<div class="row align-items-start">
 				<div class="col-lg-6 col-md-6">
 				
-				<p><iframe class="map" src="{{$mapimage}}" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
+				<p><iframe class="map" src="{{$mapimage}}" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
 				</div>
 				<div class="offset-lg-1 col-lg-5 col-md-6">
 					<div class="section-title relative">

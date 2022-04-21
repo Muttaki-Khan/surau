@@ -5,7 +5,7 @@
 @endsection
 
 @section ('title')
-	E-museum
+	Surau
 @endsection
 
 @section('mainContent')

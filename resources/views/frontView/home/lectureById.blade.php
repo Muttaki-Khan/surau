@@ -1,7 +1,7 @@
 @extends('frontView.master')
 
 @section('title_area')
-		Gallery
+		Lecture
 @endsection
 
 
@@ -31,32 +31,7 @@
 @endsection
 
 @section('feature')
-      <font face = "Times New Roman" class="{{$font}}" size = "2" style="font-size:2vw;">Gallery</font><br><br>
-<section class="gallery-area">
-		<div class="container">
-			<div class="row align-items-center">
-			@foreach($imges as $img)
-				<div class="col-lg-5 col-md-6 col-sm-6">
-					<div class="single-gallery">
-						<div class="overlay"></div>
-						<figure>
-							<img src="{{asset($img->pic)}}" alt="img" width="400" height="250">
-						</figure>
-						<div class="icon">
-							<a href="{{asset($img->pic)}}" class="photo-gallery-pop-up">
-								<span class="lnr lnr-cross"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-			@endforeach
-			</div>
-		</div>
-	</section>
-	<div class="row">
-        <div class="col-12 text-center">
-            {{ $imges->links() }}
-        </div>
-    </div>
+llllllllll
 	<br><br><br><br><br><br>
 @endsection
+

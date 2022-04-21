@@ -5,7 +5,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{url('/')}}">Go To Museum</a>
+                <a class="navbar-brand" href="{{url('/')}}">Go To Website</a>
             </div>
 
 

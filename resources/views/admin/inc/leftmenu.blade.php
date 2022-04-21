@@ -97,6 +97,19 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
+                            <a href="#"><i class="glyphicon glyphicon-erase"></i> Lecture Control <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ url('/lecture/entry')}}">Lecture Video Entry</a>
+                                </li>                               
+                                <li>
+                                    <a href="{{ url('/lecture/manage')}}">Lecture Video Manage</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
                             <a href="#"><i class="glyphicon glyphicon-erase"></i>Website Theme Control <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                                   

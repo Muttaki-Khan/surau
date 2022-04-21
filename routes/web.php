@@ -3,6 +3,8 @@ use App\User;
 use App\item;
 use App\category;
 use App\contacts;
+use App\lectures;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -91,8 +93,10 @@ Route::get('/goals', 'FrontController@aboutGoal');
 //============= Home.Contact =============
 Route::get('/contact', 'FrontController@contact');
 
-//============= Home.Gallery =============
-Route::get('/gallery', 'GalleryController@gallery');
+//============= Home.Lecture =============
+Route::get('/video', 'LectureController@videoLecture');
+Route::get('/lectureById={id}', 'LectureController@videoLectureById')->where('id','[0-9]+');
+
 //============= Home.Exhibition =============
 Route::get('/exhibition', 'FrontController@exhibitionIntro');
 
@@ -154,6 +158,15 @@ Route::get('/msg/kill/{id}',[
 	Route::get('/about/edit/{id}','AboutController@edit');
 	Route::post('/about/edit','AboutController@update');
 	Route::get('/about/delete/{id}','AboutController@delete');
+
+
+		//============= Admin.Lecture Video =============
+	Route::get('/lecture/entry', 'LectureController@index');
+    Route::post('/lecture/entry', 'LectureController@save');
+    Route::get('/lecture/manage','LectureController@manage');
+	Route::get('/lecture/edit/{id}','LectureController@edit');
+	Route::post('/lecture/edit','LectureController@update');
+	Route::get('/lecture/delete/{id}','LectureController@delete');
 
 	
 	//themecontrol
