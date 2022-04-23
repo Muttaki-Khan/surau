@@ -31,7 +31,13 @@
 @endsection
 
 @section('feature')
-llllllllll
-	<br><br><br><br><br><br>
+
+
+<iframe width="420" height="315"
+src="{{$lecture->video_link}}">
+</iframe>
+
+
+<br><br><br><br><br><br>
 @endsection
 

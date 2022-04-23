@@ -137,6 +137,7 @@ class LectureController extends Controller
     $museum_id = session('museum_id', '1');
     $user = User::where('id',1)->first();
     $lecture = lectures::find($id);
+    $lectureId = $lecture->video_link;
 
     $theme = $user->theme;
     $logo = $user->logo;
