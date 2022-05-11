@@ -1,11 +1,11 @@
 @extends('admin.master')
 
 @section('title')
-	Item Edit
+	Activity Edit
 @endsection
 
 @section('content-heading')
-	Item Edit
+	Activity Edit
 
 @endsection
 
@@ -21,7 +21,7 @@
                                              value="{{$item->itemName}}"  name="name">
                                         
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label>Category</label>
                                             <select name="categoryId" class="form-control">
                                             @foreach($categories as $category)    
@@ -35,7 +35,7 @@
                                              value="{{$item->itemCode}}"
                                            name="code">
                                         
-                                        </div>
+                                        </div> -->
                                          <div class="form-group">
                                             <label>Picture</label>
                                             <input type="file" class="form-control" name="pic">

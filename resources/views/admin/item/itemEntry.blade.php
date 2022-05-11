@@ -1,12 +1,11 @@
 @extends('admin.master')
 
 @section('title')
-	Item Entry
+	Activity Entry
 @endsection
 
 @section('content-heading')
-	Item Entry
-	<hr>
+	Activity Entry
     <h4 style="color: green;">{{Session::get('message')}}</h4>
 
 @endsection
@@ -18,11 +17,11 @@
                                     
                                         {!! Form::open(['url'=>'/item/entry','method'=>'post','enctype'=>'multipart/form-data'])!!}
                                         <div class="form-group">
-                                            <label>Item Name</label>
+                                            <label>Activity Name</label>
                                             <input type="text" class="form-control" name="name">
                                         
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label>Category</label>
                                             <select name="categoryId" class="form-control">
                                             @foreach($categories as $category)    
@@ -34,7 +33,7 @@
                                             <label>Item Code</label>
                                             <input class="form-control" name="code">
                                         
-                                        </div>
+                                        </div> -->
                                          <div class="form-group">
                                             <label>Picture</label>
                                             <input type="file" class="form-control" name="pic">

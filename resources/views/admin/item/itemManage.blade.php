@@ -1,11 +1,11 @@
 @extends('admin.master')
 
 @section('title')
-	Item Manage
+	Activity Manage
 @endsection
 
 @section('content-heading')
-	Item Manage
+	Activity Manage
     <hr>
     <h3 style="color: green;">{{Session::get('message')}}</h3>
 
@@ -28,9 +28,8 @@
                                 <thead>
                                     <tr>
                                         <th>SI.</th>
-                                        <th>Item Name</th>
-                                        <th>Category Name</th>
-                                        <th>Code</th>
+                                        <th>Name</th>
+                                
                                         <th>Picture</th>
                                         <th>Information</th>
                                         <th>Action</th>
@@ -41,8 +40,7 @@
                                 	<tr>
                                 		<td>{{++$i}}</td>
                                 		<td>{{$item->itemName}}</td>
-                                		<td>{{$item->catName}}</td>
-                                		<td>{{$item->itemCode}}</td>
+                                	
                                 		<td><img src="{{asset($item->pic)}}" width="60"alt-"no pic"></td>
                                 		
                                 		<td>{{$item->information}}</td>

@@ -8,13 +8,19 @@
                             <a href="{{ url('/home')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category Control<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Member Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ url('/category/save')}}">Category Entry</a>
+                                    <a href="{{ url('/member/entry')}}">Member Entry</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/category/manage')}}">Category Manage</a>
+                                    <a href="{{ url('/member/manage')}}">Member Manage</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/showMember')}}">Member Request</a>
+                                </li>                               
+                                <li>
+                                    <a href="{{ url('/readMember')}}">Delete Request</a>
                                 </li>
                                
                             </ul>
@@ -22,13 +28,13 @@
                         </li>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Item Control<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Activity Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ url('/item/entry')}}">Item Entry</a>
+                                    <a href="{{ url('/item/entry')}}">Activity Entry</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/item/manage')}}">Item Manage</a>
+                                    <a href="{{ url('/item/manage')}}">Activity Manage</a>
                                 </li>
                                
                             </ul>

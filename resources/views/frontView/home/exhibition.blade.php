@@ -31,31 +31,70 @@
 
 @section('feature')
 		
-	<div class="panel-body">
-		
-		      <font face = "Times New Roman" class="{{$font}}" size = "5" style="font-size:1.5vw;">Upcoming Events</font><br />
+<section class="contact-area section-gap">
 
-                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                <thead>
-                                    <tr>
-                                        <!-- <th>Event Information</th> -->
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    
-                                    @foreach($exhibitionIntro as $singleexhibition)
-                                    <tr class="odd gradeX">
-                                        <td><h4 class="{{$font}}">{{$singleexhibition->introduction}}</h4> </td>
+		<div class="container">
+			<div class="row align-items-start">
+            <?php 
+    $i=0;
+     ?>
+    <div class="panel-body">
 
-                                        
-                                        
-                                    </tr>
-                                    @endforeach
-                                </tbody>
+<div class="col-lg-9 d-flex flex-column">
 
-                               
-                            </table>
-                            
-                        </div>
+		  <h2 class="{{$font}}">Donations</h2><br>
+			<p class="{{$font}}"><b>Make Donations, Below is our account</b></p><br>
+			<p class="{{$font}}">AC No: 2303035529001</p><br>
+			<p class="{{$font}}">Ac Name: MD HABIB AL MUTTAKI KHAN</p><br>
+			<p class="{{$font}}">Bank: THE CITY BANK</p><br>
+			<p class="{{$font}}">Branch: BANDAR BAZAR, SYLHET</p><br><br><br>
+</div>
+		  <form class="contact-form" action="{{url('newMsg')}}" method="post">
+					{{ csrf_field() }}
+					<div class="row">
+						<div class="col-lg-6 d-flex flex-column mb-20">
+							<div class="form-group">
+							<input name="name" placeholder="Contact Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
+							 class="form-control" required="" type="text">
+							</div>
+						
+					
+					
+							<div class="form-group">
+							<input name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
+							 class="form-control" required="" type="email">
+							</div>
+					
+					
+							<div class="form-group">
+							<input name="number" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
+							 class="form-control" required="" type="text">
+							</div>
+					
+					
+							<div class="form-group">
+							<textarea class="form-control" name="message" placeholder="Post a message" onfocus="this.placeholder = ''"
+							 onblur="this.placeholder = 'Post a message'" required=""></textarea>
+							</div>
+					
+					
+							<div class="form-group">
+							<button type="submit" class="primary-btn mt-30 text-uppercase">Send Message</button>
+							</div>
+						</div>
+					
+				</div>
+				</form>
+					
+						
+</div>
+
+
+			</div>
+		</div>
+	</section>
+
+    
+ 
+	
 @endsection

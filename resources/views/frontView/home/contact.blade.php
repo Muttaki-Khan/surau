@@ -36,34 +36,36 @@
 			<div class="row align-items-start">
 				<div class="col-lg-6 col-md-6">
 				
-				<p><iframe class="map" src="{{$mapimage}}" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
+				<p><iframe class="map" src="{{$mapimage}}"  frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
 				</div>
-				<div class="offset-lg-1 col-lg-5 col-md-6">
+				
+				<div class="offset-lg-1 col-lg-5 col-md-6"><br><br>
 					<div class="section-title relative">
-						      <font face = "Times New Roman" class="{{$font}}" size = "5" style="font-size:5vw;">Contact Us</font><br />
-						      <hr>
-    <h4 style="color: green;">{{Session::get('success')}}</h4>
+						      <!-- <font face = "Times New Roman" class="{{$font}}" size = "5" style="font-size:4vw;">Contact Us</font><br/> -->
+							  <h2 class="{{$font}}">Contact Us</h2><br>
+
+   				 <h4 style="color: green;">{{Session::get('success')}}</h4>
 
 							<h2 class="{{$font}}">Address</h2> <br>
 							
 						
 						<div class="mb-20">
 							@foreach($contact as $contact)
-							<p class="{{$font}}">{{ $contact->address }}</p>
+							<p class="{{$font}}">{{ $contact->address }}</p><br><br>
 							
 						</div>
 						<div class="mb-20">
 
-							<h3 class="{{$font}}">For any required, kindly contact</h3>
-							<p class="{{$font}}">{{ $contact->contact1 }}</p>
-							<p class="{{$font}}">{{ $contact->contact2 }}</p>
-							<p class="{{$font}}">{{ $contact->contact3 }}</p>
+							<h3 class="{{$font}}">For any required, kindly contact</h3><br>
+							<p class="{{$font}}">{{ $contact->contact1 }}</p><br><br>
+							<p class="{{$font}}">{{ $contact->contact2 }}</p><br><br>
+							<!-- <p class="{{$font}}">{{ $contact->contact3 }}</p> -->
 						</div>
 						<div class="mail">
 
-							<h3 class="{{$font}}">Email</h3>
-							<p class="{{$font}}">{{ $contact->email1 }}</p>
-							<p class="{{$font}}">{{ $contact->email3 }}</p>
+							<h3 class="{{$font}}"><b>Email</b></h3><br>
+							<p class="{{$font}}">{{ $contact->email1 }}</p><br><br>
+							<p class="{{$font}}">{{ $contact->email3 }}</p><br><br>
 						</div>
 						@endforeach
 					</div>

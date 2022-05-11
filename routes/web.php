@@ -1,9 +1,10 @@
 <?php
 use App\User;
 use App\item;
-use App\category;
+use App\members;
 use App\contacts;
 use App\lectures;
+use App\category;
 
 
 /*
@@ -52,11 +53,12 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 			$latest = DB::table('items')->orderBy('id', 'desc')->where('user_id',1)->skip(0)->take(1)->get();
 			$latest2 = DB::table('items')->orderBy('id', 'desc')->where('user_id',1)->skip(1)->take(1)->get();
 			$latest3 = DB::table('items')->orderBy('id', 'desc')->where('user_id',1)->skip(2)->take(1)->get();
+			$members = members::all();
 			$categories = category::all();
 			$footimg = $user->footimg;
 			$contacts = contacts::where('id',1)->first();
 
-            return view('frontView.home.homeContent', compact('contacts','theme','logo','font','img1','img2','img3','textcolor','latest','latest2','latest3','categories','footimg'));
+            return view('frontView.home.homeContent', compact('categories','contacts','theme','logo','font','img1','img2','img3','textcolor','latest','latest2','latest3','members','footimg'));
         }
     });
 });
@@ -100,6 +102,12 @@ Route::get('/lectureById={id}', 'LectureController@videoLectureById')->where('id
 //============= Home.Exhibition =============
 Route::get('/exhibition', 'FrontController@exhibitionIntro');
 
+//============= Home.Member =============
+Route::get('/member', 'MemberController@member');
+
+Route::get('/applymember', 'MemberController@applymember');
+
+
 //============= Home.Museums =============
 Route::get('/museums', 'FrontController@museums');
 
@@ -128,6 +136,24 @@ Route::get('/contact/delete/{id}',[
 ]);
 
 
+
+
+
+Route::post('/newMember','ApplyMemberController@store');
+//============= Admin.Applymember =============
+Route::get('/showMember','ApplyMemberController@index');
+
+Route::get('/readMember','ApplyMemberController@trashed');
+
+Route::get('/member/delete{id}',[
+	'uses' => 'ApplyMemberController@destroy',
+	'as'   => 'member.delete'
+]);
+
+Route::get('/member/kill/{id}',[
+	'uses' => 'ApplyMemberController@kill',
+	'as'   => 'member.kill'
+]);
 
 
 
@@ -200,13 +226,13 @@ Route::get('/msg/kill/{id}',[
 	Route::get('/exhi/delete/{id}','ExhibitionController@delete');
 
 
-	//============= Admin.Category =============
-	Route::get('/category/save','CategoryController@index');
-	Route::post('/category/save','CategoryController@save');
-	Route::get('/category/manage','CategoryController@manage');
-	Route::get('/category/edit/{id}','CategoryController@edit');
-	Route::post('/category/edit','CategoryController@update');
-	Route::get('/category/delete/{id}','CategoryController@delete');
+	//============= Admin.member =============
+	Route::get('/member/entry','MemberController@index');
+	Route::post('/member/entry','MemberController@save');
+	Route::get('/member/manage','MemberController@manage');
+	Route::get('/member/edit/{id}','MemberController@edit');
+	Route::post('/member/edit','MemberController@update');
+	Route::get('/member/delete/{id}','MemberController@delete');
 
 	//============= Admin.Item =============
 	Route::get('/item/entry','ItemController@index');

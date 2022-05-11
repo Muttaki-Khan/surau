@@ -48,9 +48,9 @@
                                <img class="card-img-bottom d-block" src="{{asset("frontEnd/images/1.jpg")}}" loading="lazy" alt="Card image cap">
                            </a>
                            <div class="author">
-                               <div class="author-image">
-                                   <img src="{{asset("frontEnd/images/1.jpg")}}" loading="lazy" class="img-fluid rounded-circle" title="Adam Ster" alt="author image">
-                               </div>
+                               <!-- <div class="author-image">
+                                   <img src="{{asset("frontEnd/images/2.jpg")}}" loading="lazy" class="img-fluid rounded-circle" title="Adam Ster" alt="author image">
+                               </div> -->
                                <div class="course-title">
                                    <a href="#url">{{$video->video_title}}</a>
                                </div>

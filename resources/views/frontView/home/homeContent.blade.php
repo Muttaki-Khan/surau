@@ -86,14 +86,14 @@
 @section('mainContent')
 <div class="soft_new_arrivals">
 	<div class="container">
-		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>new </span>collections</h3>
+		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>Upcoming </span>Events</h3>
 		<div class="new_grids">
 		
 
 		@foreach($latest as $last)
 
-			<div class="col-md-4 new-gd-left">
-			<img src="{{$last->pic}}" alt="soft-men21" height='220px' />
+			<div class="col-md-4 new-gd-middle">
+			<img src="{{$last->pic}}" alt="soft-men21" height='400px' />
 
 				<div class="wed-brand simpleCart_shelfItem">
 				</div>
@@ -103,7 +103,7 @@
 		
 		@foreach($latest2 as $last)
 			<div class="col-md-4 new-gd-middle">
-				<img src="{{$last->pic}}" alt="soft-men21"  height='220px' />
+				<img src="{{$last->pic}}" alt="soft-men21"  height='400px' />
 				<div class="wed-brandtwo simpleCart_shelfItem">
 					
 				</div>
@@ -112,8 +112,8 @@
 		@endforeach
 		@foreach($latest3 as $last)
 
-			<div class="col-md-4 new-gd-left">
-				<img src="{{$last->pic}}" alt="soft-men21"  height='220px'/>
+			<div class="col-md-4 new-gd-middle">
+				<img src="{{$last->pic}}" alt="soft-men21"  height='400px'/>
 				<div class="wed-brandtwo simpleCart_shelfItem">
 					<!-- <h4>Local Collection</h4> -->
 					
@@ -148,13 +148,7 @@
 							});
 							
 		</script>
-		<div class="sap_tabs">
-			<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-				<!-- <ul class="resp-tabs-list">
-					<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Latest Items</span></li> 
-					<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Special Items</span></li> 
-					<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li> 
-				</ul>				  	  -->
+
 				
 
 @endsection

@@ -6,7 +6,7 @@
 			  <div class="container-fluid" >
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <button type="button" class="navbar-toggle collapsed {{$textcolor}}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -68,8 +68,9 @@
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/item')}}">AKTIVITI</a></li>
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/video')}}">VIDEO KULIAH</a></li>
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/exhibition')}}">SUMBANGAN DAN BANTUAN</a></li>
-					<!-- <li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/member')}}">MEMBER</a></li> -->
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/contact')}}">HUBUNGI KAMI</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/member')}}">MEMBER</a></li>
+
 
 				  </ul>
 				</div>
@@ -90,4 +91,29 @@
 };
 </script>
 
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("dataTables-example");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    columns = tr[i].getElementsByTagName("td");
+    for ( j = 0; j<columns.length ; j++){
+      td = tr[i].getElementsByTagName("td")[j];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break;
+        } else {
+          tr[i].style.display = "none";
+        }
+      } 
+    }      
+  }
+}
+</script>
 

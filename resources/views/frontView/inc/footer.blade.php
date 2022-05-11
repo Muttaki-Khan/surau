@@ -1,4 +1,7 @@
 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="footer">
 	<div class="container">
 		<div class="col-md-3 footer-left">
@@ -30,27 +33,14 @@
 				</div>
 				
 				<div class="col-md-6 sign-gd-two ">
-					<h4 class="{{$font}}">Museum Information</h4>
+					<h4 class="{{$font}}">Surau Information</h4>
 					<ul>
-						<li><i class="glyphicon glyphicon-map-marker {{$font}}" aria-hidden="true"></i>Address : {{$contacts->address}}</li>
+						<li><i class="fa fa-address-book {{$font}}" aria-hidden="true"></i>Address : {{$contacts->address}}</li>
 						<li><i class="glyphicon glyphicon-envelope {{$font}}" aria-hidden="true"></i>Email : {{$contacts->email1}}</li>
-						<li><i class="glyphicon glyphicon-earphone {{$font}}" aria-hidden="true"></i>Phone : {{$contacts->contact1}}</li>
+						<li><i class="fa fa-mobile {{$font}}" style="font-size:18px" aria-hidden="true"></i>Phone : {{$contacts->contact1}}</li>
 					</ul>
 				</div>
-				<div class="col-md-4 sign-gd flickr-post">
-					<!-- <h4> Posts</h4>
-					<ul>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/1.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/2.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/3.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/4.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/5.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/6.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/7.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/8.jpg" alt=" " class="img-responsive" /></a></li>
-						<li><a href="item"><img src="{{ asset('frontEnd') }}/images/9.jpg" alt=" " class="img-responsive" /></a></li>
-					</ul> -->
-				</div>
+				
 				<div class="clearfix"></div>
 			</div>
 		</div>

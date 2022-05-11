@@ -113,7 +113,7 @@ label{
     margin-top: 11px;
 }
 .header-bot {
-    padding: 25px 0;
+    padding: 5px 0;
 }
 .header-right ul li{
 	display:inline-block;
@@ -1677,7 +1677,7 @@ a.single-item{
 
 .imglogo {
 	border: 0;
-	margin: 2px;
+	margin: 0 px;
 	margin-left: -50px;
   }
 
@@ -1881,6 +1881,8 @@ h3.tittle {
 }
 .map{
 	margin:50px 0;
+	width:100%;
+	min-height:400px;
 }
 .contact-grid i {
     color: #fff;
@@ -3676,7 +3678,7 @@ td.invert-image a img {
 		width: 50%;
 	}
 	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-		background-color: #6aa82c;
+		background-color: #4d5b40;
 	}
 	.navbar-default .navbar-toggle .icon-bar {
 		background-color: #FFF;
@@ -4224,7 +4226,7 @@ td.invert-image a img {
 		margin: 30px auto;
 	}
 	.coupons {
-		padding-top: 54px;
+		padding-top: 174px;
 		min-height: 735px;
 	}
 	.coupons-gd h4 {
