@@ -35,7 +35,7 @@
 @section('feature')
 
 
-<section class="w3l-offered-courses">
+<section class="contact-area section-gap w3l-offered-courses">
         <div class="blog py-5" id="blog">
             <div class="containerv pb-lg-5">
         
@@ -67,7 +67,8 @@
                 </div>     
             </div>
         </div>
-	<br><br><br><br>               
+	<br><br><br><br>        
+    </section>       
 @endsection
 
 

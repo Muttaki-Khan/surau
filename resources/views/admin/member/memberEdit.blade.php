@@ -21,12 +21,17 @@
                                         
                                         </div>
                                         <div class="form-group">
+                                            <label>Email</label>
+                                            <input class="form-control" name="email" value="{{$member->email}}">
+                                        
+                                        </div>
+                                        <div class="form-group">
                                             <label>Address</label>
                                             <textarea class="form-control" name="address"  placeholder="Enter Address"> {{$member->address}} </textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Mobile</label>
-                                            <input class="form-control" name="contacts" value="{{$member->contacts}}">
+                                            <input class="form-control" name="mobile" value="{{$member->mobile}}">
                                         
                                         </div>
 

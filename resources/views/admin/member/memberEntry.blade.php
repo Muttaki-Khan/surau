@@ -23,13 +23,18 @@
                                         
                                         </div>
                                         <div class="form-group">
+                                            <label>Email</label>
+                                            <input class="form-control" name="email">
+                                        
+                                        </div>
+                                        <div class="form-group">
                                             <label>Address</label>
                                             <textarea class="form-control" name="address" placeholder="Enter Address"> </textarea>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>Mobile</label>
-                                            <input class="form-control" name="contacts">
+                                            <input class="form-control" name="mobile">
                                         
                                         </div>
                                         

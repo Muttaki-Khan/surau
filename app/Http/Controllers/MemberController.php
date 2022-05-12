@@ -30,8 +30,9 @@ class MemberController extends Controller
 
 
         $member->name = $request->name;
+        $member->email = $request->email;
         $member->address = $request->address;
-        $member->contacts = $request->contacts;
+        $member->mobile = $request->mobile;
 
         $member->save();
 
@@ -56,8 +57,9 @@ public function update(Request $request){
 
     $memberUp = members::find($request->memberId);
     $memberUp->name=$request->name;
+    $memberUp->email=$request->email;
     $memberUp->address=$request->address;
-    $memberUp->contacts=$request->contacts;
+    $memberUp->mobile=$request->mobile;
 
     $memberUp->save();
 

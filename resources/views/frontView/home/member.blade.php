@@ -46,13 +46,14 @@
     <input type="text" id="myInput" onkeyup="myFunction()" 
     placeholder="Search for names.." title="Type in a name" style="">
 
-    <a href="applymember"><button type="button" class="btn btn-primary">Apply For Membership</button></a>
+    <!-- <a href="applymember"><button type="button" class="btn btn-primary">Apply For Membership</button></a> -->
 
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
                                         <th class="{{$font}}">SI.</th>
                                         <th class="{{$font}}">Member Name</th>
+                                        <th class="{{$font}}">Email</th>
                                         <th class="{{$font}}">Mobile</th>
                                         <th class="{{$font}}">Address</th>
                                         
@@ -78,7 +79,56 @@
 		</div>
 	</section>
 
+    <section class="contact-area section-gap">
+
+		<div class="container">
+			<div class="row align-items-start">
+            <?php 
+    $i=0;
+     ?>
+    <div class="panel-body">
+				<h2 class="{{$font}}">Apply For Membership</h2><br>
+
+
+					<form class="contact-form" action="{{url('newMember')}}" method="post">
+						{{ csrf_field() }}
+						<div class="row">
+							<div class="col-lg-6 d-flex flex-column mb-20">
+								<div class="form-group">
+								<input name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
+								 class="form-control" required="" type="text">
+								</div>
+					
+								<div class="form-group">
+								<input name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
+								 class="form-control" required="" type="email">
+								</div>
+					
+								<div class="form-group">
+								<input name="mobile" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
+								 class="form-control" required="" type="text">
+								</div>
+							
+								<div class="form-group">
+								<textarea class="form-control" name="address" placeholder="Address Details" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Address Details'" required=""></textarea>
+								</div>
+						
+								<div class="form-group">
+								<button type="submit" class="primary-btn mt-30 text-uppercase">Send Request</button>
+								</div>
+							</div>
+						
+							</div>
+							</form>
+
+                        </div>
+			</div>
+		</div>
+	</section>
+
     
+ 
  
                         
 @endsection

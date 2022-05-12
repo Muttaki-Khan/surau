@@ -47,39 +47,27 @@
 					<form class="contact-form" action="{{url('newMember')}}" method="post">
 						{{ csrf_field() }}
 						<div class="row">
-							<div class="col-lg-12 d-flex flex-column mb-20">
+							<div class="col-lg-6 d-flex flex-column mb-20">
 								<div class="form-group">
 								<input name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
 								 class="form-control" required="" type="text">
 								</div>
-							</div>
-						
-						
-							<div class="col-lg-12 d-flex flex-column mb-20">
+					
 								<div class="form-group">
 								<input name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
 								 class="form-control" required="" type="email">
 								</div>
-							</div>
-						
-						
-							<div class="col-lg-12 d-flex flex-column mb-20">
+					
 								<div class="form-group">
 								<input name="mobile" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
 								 class="form-control" required="" type="text">
 								</div>
-							</div>
-						
-						
-							<div class="col-lg-12 d-flex flex-column">
+							
 								<div class="form-group">
 								<textarea class="form-control" name="address" placeholder="Address Details" onfocus="this.placeholder = ''"
 								 onblur="this.placeholder = 'Address Details'" required=""></textarea>
 								</div>
-							</div>
 						
-						
-							<div class="col-lg-12 d-flex justify-content-end">
 								<div class="form-group">
 								<button type="submit" class="primary-btn mt-30 text-uppercase">Send Request</button>
 								</div>

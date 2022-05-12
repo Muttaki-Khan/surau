@@ -84,6 +84,8 @@
 @endsection
 
 @section('mainContent')
+<section class="contact-area section-gap">
+
 <div class="soft_new_arrivals">
 	<div class="container">
 		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>Upcoming </span>Events</h3>
@@ -126,6 +128,8 @@
 		</div>
 	</div>
 </div>
+</section>
+
 <!-- //content -->
 
 <!-- content-bottom -->
@@ -134,8 +138,6 @@
 <!-- //content-bottom -->
 <!-- product-nav -->
 
-<div class="product-easy">
-	<div class="container">
 		
 		<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 		<script type="text/javascript">

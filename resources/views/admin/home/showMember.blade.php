@@ -5,7 +5,7 @@
 @endsection
 
 @section('content-heading')
-	Unread Messages
+	Applied Members
 	
 @endsection
 @section('mainContent')

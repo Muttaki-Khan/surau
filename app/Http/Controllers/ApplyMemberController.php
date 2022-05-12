@@ -5,14 +5,16 @@ use Session;
 use App\contacts;
 use App\applymembers;
 use Illuminate\Http\Request;
+use App\members;
+
 
 
 class ApplyMemberController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -98,15 +100,25 @@ class ApplyMemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,Request $request)
     {
         $member = applymembers::find($id);
+        // $member->delete();
+        // Session::flash('success','You are read the message.');
+        // return redirect()->back();
+        $member = new members();
 
-        $member->delete();
 
-        Session::flash('success','You are read the message.');
+        $member->name = $request->name;
+        $member->email = $request->email;
+        $member->address = $request->address;
+        $member->mobile = $request->mobile;
 
-        return redirect()->back();
+        $member->save();
+
+        return redirect('/member/entry')->with('message','Data insert successfully.');
+
+
     }
     public function trashed()
     {
