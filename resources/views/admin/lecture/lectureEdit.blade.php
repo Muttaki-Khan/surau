@@ -1,11 +1,11 @@
 @extends('admin.master')
 
 @section('title')
-	About Edit
+	lecture Edit
 @endsection
 
 @section('content-heading')
-	About Edit
+	lecture Edit
 	
 @endsection
 
@@ -15,18 +15,28 @@
                                 <div class="col-lg-6">
                                     
                                     	{!! Form::open(['url'=>'/lecture/edit','method'=>'post', 'name'=>'editForm' ,'role'=>'form'])!!}
-                                        <div class="form-group">
-                                            <label>Introduction</label>
-                                            <textarea class="form-control" name="introduction"  placeholder="Enter description"> {{$about->introduction}} </textarea>
                                         
+                                        <div class="form-group">
+                                            <label>Title</label>
+                                            <input type="text" class="form-control"
+                                             value="{{$lecture->video_title}}"  name="video_title">
+                
                                         </div>
                                         <div class="form-group">
-                                            <label>Goals</label>
-                                            <textarea class="form-control" name="goals"  placeholder="Enter description"> {{$about->goals}} </textarea>
+                                            <label>Lecturer Name</label>
+                                            <input type="text" class="form-control"
+                                             value="{{$lecture->lecturer_name}}"  name="lecturer_name">
+                
                                         </div>
-                                        
+                                        <div class="form-group">
+                                            <label>Link</label>
+                                            <input type="text" class="form-control"
+                                             value="{{$lecture->video_link}}"  name="video_link">
+                
+                                        </div>
 
-                                        
+                                        <input type="hidden" name="lecture_id" value="{{$lecture->id}}">
+
 
                                         </div>
                                         <div class="form-group">
@@ -34,9 +44,9 @@
                                         </div>	
                                     {!! Form::close() !!}
                                     <script type="text/javascript">
-                                        document.forms['aboutEditForm'].elements['aboutId'].value='{{$about->aboutId}}'</script>
+                                        document.forms['lectureEditForm'].elements['lectureId'].value='{{$lecture->lectureId}}'</script>
 
-                                    
+                                
                                 </div>
                             </div>
 

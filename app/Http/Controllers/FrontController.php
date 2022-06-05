@@ -8,7 +8,7 @@ use App\staffs;
 use App\item;
 use App\about;
 use App\category;
-use App\exhibition;
+use App\donations;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use DB;
@@ -230,7 +230,7 @@ class FrontController extends Controller
       // return view('frontView.home.aboutGoal',compact('aboutGoal'));
     }
 
-    public function exhibitionIntro(){
+    public function donationIntro(){
 
         $museum_id = session('museum_id', '1');
         $contacts = contacts::where('id',1)->first();
@@ -249,7 +249,6 @@ class FrontController extends Controller
             $contacts = DB::table('contacts')->where('user_id',1)->first();
   
           }         
-           $exhibitionIntro  = DB::table('exhibitions')->where('user_id', $museum_id)->get();
   
           $theme = $user->theme;
           $logo = $user->logo;
@@ -257,13 +256,12 @@ class FrontController extends Controller
           $textcolor = $user->textcolor;
           $categories = category::all();
           $footimg = $user->footimg;
-          return view('frontView.home.exhibition', compact('exhibitionIntro','contacts','theme','logo','font','textcolor','categories','footimg'));
+          return view('frontView.home.donation', compact('contacts','theme','logo','font','textcolor','categories','footimg'));
   
         }else{
   
           $user = User::where('id',Auth::id())->first();
           // $user = User::where('id',1)->first();
-          $exhibitionIntro  = DB::table('exhibitions')->where('user_id', Auth::id())->get();
           if(DB::table('contacts')->where('user_id')->exists()){
 
             $contacts = DB::table('contacts')->where('user_id',Auth::id())->first();
@@ -277,7 +275,7 @@ class FrontController extends Controller
           $textcolor = $user->textcolor;
           $categories = category::all();
           $footimg = $user->footimg;
-          return view('frontView.home.exhibition', compact('exhibitionIntro','contacts','theme','logo','font','textcolor','categories','footimg'));
+          return view('frontView.home.donation', compact('contacts','theme','logo','font','textcolor','categories','footimg'));
         }
       // return view('frontView.home.exhibition',compact('exhibitionIntro'));
     }
@@ -399,10 +397,8 @@ class FrontController extends Controller
           
                   }
                   $items = DB::table('items')
-                  ->join('categories','categories.id','=','categoryId')
-                  ->select('items.*','categories.categoryName as catName')
+              
                   ->where('items.user_id', $museum_id)
-                  ->where('categories.user_id', $museum_id)
                   ->paginate(100);
           
                   $theme = $user->theme;
@@ -419,10 +415,8 @@ class FrontController extends Controller
                   // $user = User::where('id',1)->first();
 
                   $items = DB::table('items')
-                  ->join('categories','categories.id','=','categoryId')
-                  ->select('items.*','categories.categoryName as catName')
+                
                   ->where('items.user_id', Auth::id())
-                  ->where('categories.user_id', Auth::id())
                   ->paginate(100);
                   if(DB::table('contacts')->where('user_id')->exists()){
 

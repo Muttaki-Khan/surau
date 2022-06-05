@@ -20,9 +20,8 @@ class LectureController extends Controller
    
       
      public function index(){
-
      
-      return view('admin.lecture.lectureEntry'); 
+      return view('admin.lecture.lectureEntry');
   }  
 
 
@@ -51,15 +50,14 @@ class LectureController extends Controller
 
   public function edit($id){
 
-      $lectureEdit = lecture::where('id',$id)->first();
+      $lectureEdit = lectures::where('id',$id)->first();
       return view('admin.lecture.lectureEdit',['lecture'=>$lectureEdit]);
   }
 
   public function update(Request $request){
 
-      
 
-      $lecture= lecture::find($request->lecture_id);
+      $lecture= lectures::find($request->lecture_id);
       
       $lecture->video_title = $request->video_title;
       $lecture->lecturer_name = $request->lecturer_name;
@@ -73,7 +71,7 @@ class LectureController extends Controller
 
   public function delete($id){
 
-      $lectureDelete = lecture::find($id);
+      $lectureDelete = lectures::find($id);
       $lectureDelete->delete();
       
 
@@ -110,7 +108,7 @@ class LectureController extends Controller
         return view('frontView.home.video', compact('lecture','theme','logo','font','textcolor','categories','footimg','contacts'));
 
       }else{
-        $lecture = Lectures::find($id);
+        
 
         $user = User::where('id',Auth::id())->first();
         // $user = User::where('id',1)->first();

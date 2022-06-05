@@ -26,7 +26,7 @@
                                         </div>
                                         
 
-                                        
+                                        <input type="hidden" name="about_id" value="{{$about->id}}">
 
                                         </div>
                                         <div class="form-group">

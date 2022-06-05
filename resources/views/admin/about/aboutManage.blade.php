@@ -37,7 +37,7 @@
 										<td>{{$singleAbout->goals}}</td>
 
                                         
-                                        <td class="center"><a href="{{url('/about/edit/'.$singleAbout->id)}}"></a>|<a href="{{url('/about/delete/'.$singleAbout->id)}}">Delete</td>
+                                        <td class="center"><a href="{{url('/about/edit/'.$singleAbout->id)}}">Edit</a>|<a href="{{url('/about/delete/'.$singleAbout->id)}}">Delete</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

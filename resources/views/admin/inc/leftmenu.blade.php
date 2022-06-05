@@ -10,22 +10,38 @@
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Member Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
+                                <!-- <li>
                                     <a href="{{ url('/member/entry')}}">Member Entry</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="{{ url('/member/manage')}}">Member Manage</a>
                                 </li>
                                 <li>
                                     <a href="{{ url('/showMember')}}">Member Request</a>
                                 </li>                               
-                                <li>
+                                <!-- <li>
                                     <a href="{{ url('/readMember')}}">Delete Request</a>
-                                </li>
+                                </li> -->
                                
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Donation Control<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                
+                                <li>
+                                    <a href="{{ url('/showDonation')}}">Donations Request</a>
+                                </li> 
+                                <li>
+                                    <a href="{{ url('/donation/manage')}}">Donations Given</a>
+                                </li>                              
+                                <li>
+                                    <a href="{{ url('/listdonations')}}">Incoming Donations</a>
+                                </li>
+                               
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Activity Control<span class="fa arrow"></span></a>
@@ -54,7 +70,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Event Control<span class="fa arrow"></span></a>
+                            <!-- <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Event Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{{ url('/exhi/entry')}}">Event  Entry</a>
@@ -63,7 +79,7 @@
                                     <a href="{{ url('/exhi/manage')}}">Event  Manage</a>
                                 </li>
                                
-                            </ul>
+                            </ul> -->
                             <!-- /.nav-second-level -->
                         </li>
                         <li>

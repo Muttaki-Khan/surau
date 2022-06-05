@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\members;
-use App\applymembers;
+use App\donations;
+use App\applydonations;
 use App\contacts;
 use App\staffs;
 use App\item;
 use App\about;
 use App\category;
 use App\exhibition;
+use App\incomingdonations;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use DB;
@@ -18,67 +19,83 @@ Auth::routes();
 use Illuminate\Support\Facades\Route; 
 use Session;
 
-class MemberController extends Controller
+class DonationController extends Controller
 {
+  public function incomingdonation(Request $request)
+  {
+      $donation = new incomingdonations;
+
+      $donation->name = $request->name;
+      $donation->email = $request->email;
+      $donation->mobile = $request->mobile;
+      $donation->message = $request->message;
+
+      $donation->save();
+
+      Session::flash('success','You have succesfully sent the message');
+
+      return redirect()->back();
+  }
+
     public function index(){
 
-        return view('admin.member.memberEntry');
+        return view('admin.donation.donationEntry');
 }
 
     public function save(Request $request){
 
-        $member = new members();
+        $donation = new donations();
 
 
-        $member->name = $request->name;
-        $member->email = $request->email;
-        $member->address = $request->address;
-        $member->mobile = $request->mobile;
+        $donation->name = $request->name;
+        $donation->email = $request->email;
+        $donation->address = $request->address;
+        $donation->mobile = $request->mobile;
 
-        $member->save();
+        $donation->save();
 
-        //$memberDelete = applymembers::find($request->id);
-        //$memberDelete->delete();
-        DB::table('applymembers')->where('id', '=', $request->id)->delete();
+        //$donationDelete = applydonations::find($request->id);
+        //$donationDelete->delete();
+        DB::table('applydonations')->where('id', '=', $request->id)->delete();
 
-        return redirect('/member/manage')->with('message','Data insert successfully.');
+        return redirect('/donation/manage')->with('message','Data insert successfully.');
 
   }
 public function manage(){
 
-    $members = DB::table('members')->get();
-    return view('admin.member.memberManage',['member'=>$members]);
+    $donations = DB::table('donations')->get();
+    return view('admin.donation.donationManage',['donation'=>$donations]);
 }
 
 public function edit($id){
 
-    $memberEdit = members::where('id',$id)->first();
-    return view('admin.member.memberEdit',['member'=>$memberEdit]);
+    $donationEdit = donations::where('id',$id)->first();
+    return view('admin.donation.donationEdit',['donation'=>$donationEdit]);
 }
 
 public function update(Request $request){
 
-    $memberUp = members::find($request->memberId);
-    $memberUp->name=$request->name;
-    $memberUp->email=$request->email;
-    $memberUp->address=$request->address;
-    $memberUp->mobile=$request->mobile;
+    $donationUp = donations::find($request->donationId);
+    $donationUp->name=$request->name;
+    $donationUp->email=$request->email;
+    $donationUp->address=$request->address;
+    $donationUp->mobile=$request->mobile;
 
-    $memberUp->save();
+    $donationUp->save();
 
-    return redirect('/member/manage')->with('message','Updated successfully.');
+    return redirect('/donation/manage')->with('message','Updated successfully.');
 
 }
 
 public function delete($id){
 
-    $memberDelete = members::find($id);
-    $memberDelete->delete();
+    $donationDelete = donations::find($id);
+    $donationDelete->delete();
 
-    return redirect('/member/manage')->with('message','Deleted successfully.');
+    return redirect('/donation/manage')->with('message','Deleted successfully.');
 }
 
-public function member(){
+public function donation(){
 
     $museum_id = session('museum_id', '1');
     $contacts = contacts::where('id',1)->first();
@@ -97,12 +114,12 @@ public function member(){
       $logo = $user->logo;
       $font = $user->font;
       $textcolor = $user->textcolor;
-      $members = members::paginate(15);
+      $donations = donations::paginate(15);
       $footimg = $user->footimg;
       $mapimage = $user->mapimage;
       $categories = category::all();
 
-      return view('frontView.home.member', compact('contact','contacts','theme','logo','font','textcolor','members','footimg','mapimage','categories'));
+      return view('frontView.home.donation', compact('contact','contacts','theme','logo','font','textcolor','donations','footimg','mapimage','categories'));
 
     }else{
 
@@ -115,17 +132,17 @@ public function member(){
       $logo = $user->logo;
       $font = $user->font;
       $textcolor = $user->textcolor;
-      $members = members::paginate(15);
+      $donations = donations::paginate(15);
       $footimg = $user->footimg;
       $mapimage = $user->mapimage;
       $categories = category::all();
 
-      return view('frontView.home.member', compact('contact','contacts','theme','logo','font','textcolor','members','footimg','mapimage','categories'));
+      return view('frontView.home.donation', compact('contact','contacts','theme','logo','font','textcolor','donations','footimg','mapimage','categories'));
     }
     
 }
 
-public function applymember(){
+public function applydonation(){
 
     $museum_id = session('museum_id', '1');
     $contacts = contacts::where('id',1)->first();
@@ -144,12 +161,12 @@ public function applymember(){
       $logo = $user->logo;
       $font = $user->font;
       $textcolor = $user->textcolor;
-      $members = members::paginate(15);
+      $donations = donations::paginate(15);
       $footimg = $user->footimg;
       $mapimage = $user->mapimage;
       $categories = category::all();
 
-      return view('frontView.home.applymember', compact('contact','contacts','theme','logo','font','textcolor','members','footimg','mapimage','categories'));
+      return view('frontView.home.applydonation', compact('contact','contacts','theme','logo','font','textcolor','donations','footimg','mapimage','categories'));
 
     }else{
 
@@ -162,12 +179,12 @@ public function applymember(){
       $logo = $user->logo;
       $font = $user->font;
       $textcolor = $user->textcolor;
-      $members = members::paginate(15);
+      $donations = donations::paginate(15);
       $footimg = $user->footimg;
       $mapimage = $user->mapimage;
       $categories = category::all();
 
-      return view('frontView.home.applymember', compact('contact','contacts','theme','logo','font','textcolor','members','footimg','mapimage','categories'));
+      return view('frontView.home.applydonation', compact('contact','contacts','theme','logo','font','textcolor','donations','footimg','mapimage','categories'));
     }}
 
 

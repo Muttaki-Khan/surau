@@ -19,8 +19,9 @@
                                 <thead>
                                     <tr>
                                         <th>SI.</th>
-                                        <th>Video</th>
-                                       
+                                        <th>Video Title</th>
+                                        <th>Lecturer Name</th>
+                                        <th>Video Link</th>
                                         <th>Control</th>
                                     </tr>
                                 </thead>
@@ -32,9 +33,11 @@
                                 	@foreach($lecture as $video)
                                     <tr class="odd gradeX">
                                         <td>{{++$i}}</td>
+                                        <td>{{$video->video_title}} </td>
+                                        <td>{{$video->lecturer_name}} </td>
                                         <td>{{$video->video_link}} </td>
                                         
-                                        <td class="center"><a href="{{url('/lecture/edit/'.$video->id)}}"></a>|<a href="{{url('/lecture/delete/'.$video->id)}}">Delete</td>
+                                        <td class="center"><a href="{{url('/lecture/edit/'.$video->id)}}">Edit</a>|<a href="{{url('/lecture/delete/'.$video->id)}}">Delete</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

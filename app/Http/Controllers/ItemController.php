@@ -21,8 +21,6 @@ class ItemController extends Controller
 
 
   		$item->itemName = $request->name;
-  		$item->categoryId = $request->categoryId;
-  		$item->itemCode = $request->code;
   		$item->pic = 'Picture';
       $item->user_id = Auth::id();
   		$item->information = $request->information;
@@ -54,10 +52,7 @@ class ItemController extends Controller
   public function manage(){
 
       $items = DB::table('items')
-                  ->join('categories','categories.id','=','categoryId')
-                  ->select('items.*','categories.categoryName as catName')
                   ->where('items.user_id',Auth::id())
-                  ->where('categories.user_id',Auth::id())
                   ->paginate(3);
                  // ->where('categories')
       
@@ -109,8 +104,7 @@ class ItemController extends Controller
 
      $item= item::find($request->item_id);
      $item->itemName= $request->name;
-     $item->categoryId= $request->categoryId;
-     $item->itemCode= $request->code;
+
      $item->pic= $picUrl;
      $item->information= $request->information;
 

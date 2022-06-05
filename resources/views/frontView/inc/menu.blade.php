@@ -67,7 +67,7 @@
 					</li> -->
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/item')}}">AKTIVITI</a></li>
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/video')}}">VIDEO KULIAH</a></li>
-					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/exhibition')}}">SUMBANGAN DAN BANTUAN</a></li>
+					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/donation')}}">SUMBANGAN DAN BANTUAN</a></li>
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/contact')}}">HUBUNGI KAMI</a></li>
 					<li class=" menu__item"><a class="menu__link {{$textcolor}}" href="{{url('/member')}}">MEMBER</a></li>
 

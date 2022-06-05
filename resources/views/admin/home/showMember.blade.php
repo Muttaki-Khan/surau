@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('title')
-	Message
+	Member
 @endsection
 
 @section('content-heading')
@@ -36,7 +36,28 @@
                                             <td>{{ $member->mobile }}</td>
                                             <td>{{ $member->address }}</td>
                                             <td>
-                                                <a href="{!! route('member.delete', ['id'=>$member->id]) !!}" class="btn btn-success">Read</a>
+                                            {!! Form::open(['url'=>'/member/entry','method'=>'post','role'=>'form'])!!}
+                                            <div class="form-group">
+                                            <input type="hidden" class="form-control" name="id" value="{{$member->id}}">
+                                            <input type="hidden" class="form-control" name="name" value="{{$member->name}}">
+                                        
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" class="form-control" name="email" value="{{$member->email}}">
+                                            
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" class="form-control" name="address"  value=" {{$member->address}} ">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" class="form-control" name="mobile" value="{{$member->mobile}}">
+                                            
+                                            </div>
+                                        <div class="form-group">
+                                        	<input type="submit" class="btn btn-block btn-primary" value="Approve">
+                                        </div>	
+                                    {!! Form::close() !!}
+                                                <!-- <a href="{!! route('member.delete', ['id'=>$member->id]) !!}" class="btn btn-success">Approve</a> -->
                                             </td>
                                         </tr>
                                         @endforeach

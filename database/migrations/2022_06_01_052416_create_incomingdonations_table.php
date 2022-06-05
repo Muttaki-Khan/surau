@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemsTable extends Migration
+class CreateIncomingdonationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('incomingdonations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('itemName',100);
-            $table->string('pic',200);
-            $table->text('information');
+            $table->string('name',100);
+            $table->string('email',100);
+            $table->string('mobile',100);
+            $table->text('message');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('incomingdonations');
     }
 }

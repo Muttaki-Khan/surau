@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 use Session;
 use App\contacts;
-use App\applymembers;
+use App\applydonations;
 use Illuminate\Http\Request;
-use App\members;
+use App\donations;
 
 
 
-class ApplyMemberController extends Controller
+class ApplyDonationController extends Controller
 {
     // public function __construct()
     // {
@@ -22,10 +22,10 @@ class ApplyMemberController extends Controller
      */
     public function index()
     {
-        $member = applymembers::orderBy('id','desc')->get();
-        $memberbar = applymembers::orderBy('id','desc')->get()->take(3);
+        $donation = applydonations::orderBy('id','desc')->get();
+        $donationbar = applydonations::orderBy('id','desc')->get()->take(3);
 
-        return view('admin.home.showMember',compact('member','memberbar'));
+        return view('admin.home.showDonation',compact('donation','donationbar'));
     }
 
     /**
@@ -46,14 +46,14 @@ class ApplyMemberController extends Controller
      */
     public function store(Request $request)
     {
-        $member = new applymembers;
+        $donation = new applydonations;
 
-        $member->name = $request->name;
-        $member->email = $request->email;
-        $member->mobile = $request->mobile;
-        $member->address = $request->address;
+        $donation->name = $request->name;
+        $donation->email = $request->email;
+        $donation->mobile = $request->mobile;
+        $donation->address = $request->address;
 
-        $member->save();
+        $donation->save();
 
         Session::flash('success','You have succesfully sent the request, We will let you know if your request accepted');
 
@@ -102,8 +102,8 @@ class ApplyMemberController extends Controller
      */
     public function destroy($id)
     {
-        $member = applymembers::find($id);
-        $member->delete();
+        $donation = applydonations::find($id);
+        $donation->delete();
         Session::flash('success','You are read the message.');
         return redirect()->back();
 
@@ -111,13 +111,13 @@ class ApplyMemberController extends Controller
     }
     public function trashed()
     {
-        $member = applymembers::onlyTrashed()->get();
-        $memberbar = applymembers::orderBy('id','desc')->get()->take(3);
-        return view('admin.home.readMember',compact('member','memberbar'));
+        $donation = applydonations::onlyTrashed()->get();
+        $donationbar = applydonations::orderBy('id','desc')->get()->take(3);
+        return view('admin.home.readDonation',compact('donation','donationbar'));
     }
     public function kill($id)
     {
-        $item = applymembers::withTrashed()->where('id',$id)->first();
+        $item = applydonations::withTrashed()->where('id',$id)->first();
 
         $item->forceDelete();
 

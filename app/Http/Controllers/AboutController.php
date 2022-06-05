@@ -47,8 +47,8 @@ class AboutController extends Controller
 
   public function edit($id){
 
-      $aboutEdit = about::where('id',$id)->first();
-      return view('admin.about.aboutEdit',['about'=>$aboutEdit]);
+      $about = about::where('id',$id)->first();
+      return view('admin.about.aboutEdit',['about'=>$about]);
   }
 
   public function update(Request $request){
@@ -57,7 +57,6 @@ class AboutController extends Controller
 
       $about= about::find($request->about_id);
       $about->introduction= $request->introduction;
-     
       $about->goals= $request->goals;
     
 

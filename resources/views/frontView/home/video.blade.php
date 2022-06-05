@@ -41,21 +41,21 @@
 @foreach ($lecture as $video)
 
 <div class="col-lg-4 col-md-6 item">
-                   
+
                    <div class="card">
                        <div class="card-header p-0 position-relative">
                            <a href="#url" class="zoom d-block">
-                               <img class="card-img-bottom d-block" src="{{asset("frontEnd/images/1.jpg")}}" loading="lazy" alt="Card image cap">
+                               <img class="card-img-bottom d-block" src="{{$video->video_link}}" loading="lazy" alt="Card image cap">
+                                <iframe class="responsive-iframe" src="{{$video->video_link}}"></iframe>
                            </a>
-                           <div class="author">
-                               <!-- <div class="author-image">
-                                   <img src="{{asset("frontEnd/images/2.jpg")}}" loading="lazy" class="img-fluid rounded-circle" title="Adam Ster" alt="author image">
-                               </div> -->
-                               <div class="course-title">
-                                   <a href="#url">{{$video->video_title}}</a>
-                               </div>
-                           </div>
-                       </div>
+                           
+                       </div><br>
+                       <div class="course-title">
+                                   <a href="#url"  style="color:black; font-size:25px">{{$video->lecturer_name}}</a><br>
+                        </div><br><br>
+                        <div class="course-title">
+                                   <a href="#url"  style="color:black; font-size:20px">{{$video->video_title}}</a><br>
+                        </div><br><br>
                        <a href="{{url('/lectureById='.$video->id)}}" class="{{$theme}} btn btn-light btn-block"><strong>Play Video</strong></a>
 
                    </div>

@@ -22,6 +22,7 @@
                                         <th>Name</th>
                                         <th>Address</th>
                                         <th>Mobile</th>
+                                        <th>Email</th>
 
                                        
                                         <th>Control</th>
@@ -37,7 +38,9 @@
                                         <td>{{++$i}}</td>
                                         <td>{{$singleMember->name}} </td>
 										<td>{{$singleMember->address}}</td>
-                                        <td>{{$singleMember->contacts}}</td>
+                                        <td>{{$singleMember->mobile}}</td>
+                                        <td>{{$singleMember->email}}</td>
+
 
 
                                         

@@ -53,8 +53,8 @@
                                     <tr>
                                         <th class="{{$font}}">SI.</th>
                                         <th class="{{$font}}">Member Name</th>
-                                        <th class="{{$font}}">Email</th>
                                         <th class="{{$font}}">Mobile</th>
+                                        <th class="{{$font}}">Email</th>
                                         <th class="{{$font}}">Address</th>
                                         
                                     </tr>
@@ -64,7 +64,8 @@
                                     <tr>
                                         <td class="{{$font}}">{{++$i}}</td>
                                         <td class="{{$font}}">{{$item->name}}</td>
-                                        <td class="{{$font}}">{{$item->contacts}}</td>   
+                                        <td class="{{$font}}">{{$item->mobile}}</td>
+                                        <td class="{{$font}}">{{$item->email}}</td>      
                                         <td class="{{$font}}">{{$item->address}}</td>
                                      
                                         
@@ -87,6 +88,8 @@
     $i=0;
      ?>
     <div class="panel-body">
+    <h2 style="color: green;">{{Session::get('success')}}</h2>
+
 				<h2 class="{{$font}}">Apply For Membership</h2><br>
 
 
@@ -95,22 +98,22 @@
 						<div class="row">
 							<div class="col-lg-6 d-flex flex-column mb-20">
 								<div class="form-group">
-								<input name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
+								<input name="name" placeholder="Nama" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
 								 class="form-control" required="" type="text">
 								</div>
 					
 								<div class="form-group">
-								<input name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
+								<input name="email" placeholder="Emel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
 								 class="form-control" required="" type="email">
 								</div>
 					
 								<div class="form-group">
-								<input name="mobile" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
+								<input name="mobile" placeholder="Telefon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
 								 class="form-control" required="" type="text">
 								</div>
 							
 								<div class="form-group">
-								<textarea class="form-control" name="address" placeholder="Address Details" onfocus="this.placeholder = ''"
+								<textarea class="form-control" name="address" placeholder="Butiran Alamat" onfocus="this.placeholder = ''"
 								 onblur="this.placeholder = 'Address Details'" required=""></textarea>
 								</div>
 						

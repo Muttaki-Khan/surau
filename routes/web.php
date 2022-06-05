@@ -99,8 +99,10 @@ Route::get('/contact', 'FrontController@contact');
 Route::get('/video', 'LectureController@videoLecture');
 Route::get('/lectureById={id}', 'LectureController@videoLectureById')->where('id','[0-9]+');
 
-//============= Home.Exhibition =============
-Route::get('/exhibition', 'FrontController@exhibitionIntro');
+//============= Home.Donation =============
+Route::get('/donation', 'FrontController@donationIntro');
+
+Route::post('/incomingdonation', 'DonationController@incomingdonation');
 
 //============= Home.Member =============
 Route::get('/member', 'MemberController@member');
@@ -139,8 +141,9 @@ Route::get('/contact/delete/{id}',[
 
 
 
-Route::post('/newMember','ApplyMemberController@store');
 //============= Admin.Applymember =============
+Route::post('/newMember','ApplyMemberController@store');
+
 Route::get('/showMember','ApplyMemberController@index');
 
 Route::get('/readMember','ApplyMemberController@trashed');
@@ -153,6 +156,24 @@ Route::get('/member/delete{id}',[
 Route::get('/member/kill/{id}',[
 	'uses' => 'ApplyMemberController@kill',
 	'as'   => 'member.kill'
+]);
+
+
+//============= Admin.Applydonation =============
+Route::post('/newDonation','ApplyDonationController@store');
+
+Route::get('/showDonation','ApplyDonationController@index');
+
+Route::get('/readDonation','ApplyDonationController@trashed');
+
+Route::get('/donation/delete{id}',[
+	'uses' => 'ApplyDonationController@destroy',
+	'as'   => 'donation.delete'
+]);
+
+Route::get('/donation/kill/{id}',[
+	'uses' => 'ApplyDonationController@kill',
+	'as'   => 'donation.kill'
 ]);
 
 
@@ -184,6 +205,15 @@ Route::get('/msg/kill/{id}',[
 	Route::get('/about/edit/{id}','AboutController@edit');
 	Route::post('/about/edit','AboutController@update');
 	Route::get('/about/delete/{id}','AboutController@delete');
+
+	//============= Admin.Staff =============
+	Route::get('/staff/entry','StaffController@index');
+	Route::post('/staff/entry','StaffController@save');
+	Route::get('/staff/manage','StaffController@manage');
+	Route::get('/staff/view/{id}','StaffController@singleStaff');
+	Route::get('/staff/edit/{id}','StaffController@editStaff');
+	Route::post('/staff/edit','StaffController@updateStaff');
+	Route::get('/staff/delete/{id}','StaffController@deleteStaff');
 
 
 		//============= Admin.Lecture Video =============
@@ -217,13 +247,13 @@ Route::get('/msg/kill/{id}',[
 
 
 
-	//============= Admin.Exhibition =============
-	Route::get('/exhi/entry', 'ExhibitionController@index');
-    Route::post('/exhi/entry', 'ExhibitionController@save');
-    Route::get('/exhi/manage','ExhibitionController@manage');
-	Route::get('/exhi/edit/{id}','ExhibitionController@edit');
-	Route::post('/exhi/edit','ExhibitionController@update');
-	Route::get('/exhi/delete/{id}','ExhibitionController@delete');
+	//============= Admin.Donation =============
+	Route::get('/donation/entry', 'DonationController@index');
+    Route::post('/donation/entry', 'DonationController@save');
+    Route::get('/donation/manage','DonationController@manage');
+	Route::get('/donation/edit/{id}','DonationController@edit');
+	Route::post('/donation/edit','DonationController@update');
+	Route::get('/donation/delete/{id}','DonationController@delete');
 
 
 	//============= Admin.member =============
@@ -244,13 +274,6 @@ Route::get('/msg/kill/{id}',[
 	Route::get('/item/delete/{id}','ItemController@deleteItem');
 
 
-	//============= Admin.Staff =============
-	Route::get('/staff/entry','StaffController@index');
-	Route::post('/staff/entry','StaffController@save');
-	Route::get('/staff/manage','StaffController@manage');
-	Route::get('/staff/view/{id}','StaffController@singleStaff');
-	Route::get('/staff/edit/{id}','StaffController@editStaff');
-	Route::post('/staff/edit','StaffController@updateStaff');
-	Route::get('/staff/delete/{id}','StaffController@deleteStaff');
+
 
 
