@@ -160,9 +160,14 @@ Route::get('/member/kill/{id}',[
 
 
 //============= Admin.Applydonation =============
+Route::get('/listdonations','DonationController@listdonations');
+Route::get('/listdonations/delete/{id}','DonationController@indelete');
+
+
 Route::post('/newDonation','ApplyDonationController@store');
 
 Route::get('/showDonation','ApplyDonationController@index');
+Route::get('/showDonation/view/{id}','ApplyDonationController@show');
 
 Route::get('/readDonation','ApplyDonationController@trashed');
 

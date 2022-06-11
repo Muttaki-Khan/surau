@@ -6,8 +6,8 @@ use App\contacts;
 use App\applydonations;
 use Illuminate\Http\Request;
 use App\donations;
-
-
+use Mail;
+use DB;
 
 class ApplyDonationController extends Controller
 {
@@ -52,13 +52,25 @@ class ApplyDonationController extends Controller
         $donation->email = $request->email;
         $donation->mobile = $request->mobile;
         $donation->address = $request->address;
+        $donation->status = $request->status;
+        $donation->account_name = $request->account_name;
+        $donation->account_number = $request->account_number;
+        $donation->bank_name = $request->bank_name;
+        $donation->message = $request->message;
+
 
         $donation->save();
+
+        Mail::send('email.send',['name'=>'Hello'],function($message)
+        {
+            $message->to('suraudeveloper@gmail.com','New Form')->from('luturahmankhan@gmail.com')->subject("Fund Request");
+        });
 
         Session::flash('success','You have succesfully sent the request, We will let you know if your request accepted');
 
         return redirect()->back();
     }
+
 
     /**
      * Display the specified resource.
@@ -68,7 +80,11 @@ class ApplyDonationController extends Controller
      */
     public function show($id)
     {
-        //
+        $donation = DB::table('applydonations')
+                            ->where('applydonations.id',$id)
+                            ->first();
+
+        return view('admin.home.viewFunding',compact('donation'));
     }
 
     /**

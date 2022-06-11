@@ -105,7 +105,7 @@
 		  <h2 class="{{$font}}">Apply For Fundings</h2><br>
 			
 </div>
-		  <form class="contact-form" action="{{url('newMsg')}}" method="post">
+		  <form class="contact-form" action="{{url('newDonation')}}" method="post">
 					{{ csrf_field() }}
 					<div class="row">
 						<div class="col-lg-6 d-flex flex-column mb-20">
@@ -121,11 +121,11 @@
 					
 				
 							<div class="form-group">
-							<input name="number" placeholder="Telefon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
+							<input name="mobile" placeholder="Telefon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
 							 class="form-control" required="" type="text">
 							</div>
 							<div class="form-group">
-							<textarea class="form-control" name="adress" placeholder="Alamat" onfocus="this.placeholder = ''"
+							<textarea class="form-control" name="address" placeholder="Alamat" onfocus="this.placeholder = ''"
 							 onblur="this.placeholder = 'Write your address'" required=""></textarea>
 							</div>
 							<div class="form-group">
@@ -133,16 +133,16 @@
 							 class="form-control" required="" type="text"><br>
 							</div>
 							<div class="form-group">
-							<input name="acname" placeholder="Nombor Akaun Bank" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bank Account Number'"
+							<input name="account_name" placeholder="Nombor Akaun Bank" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bank Account Number'"
 							 class="form-control" required="" type="text"><br>
 							</div>
 							<div class="form-group">
-							<input name="acname" placeholder="Nama Akaun Bank" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bank Account Name'"
+							<input name="account_number" placeholder="Nama Akaun Bank" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bank Account Name'"
 							 class="form-control" required="" type="text"><br>
 							</div>
 					
 							<div class="form-group">
-							<input name="bname" placeholder="Nama Bank" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bank Name'"
+							<input name="bank_name" placeholder="Nama Bank" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Bank Name'"
 							 class="form-control" required="" type="text">
 							</div>
 					

@@ -36,6 +36,18 @@ class DonationController extends Controller
 
       return redirect()->back();
   }
+  public function listdonations(){
+
+    $indonations = DB::table('incomingdonations')->get();
+    return view('admin.donation.incomingdonations',['indonations'=>$indonations]);
+}
+public function indelete($id){
+
+  $donationDelete = incomingdonations::find($id);
+  $donationDelete->delete();
+
+  return redirect('/listdonations')->with('message','Deleted successfully.');
+}
 
     public function index(){
 
@@ -49,8 +61,14 @@ class DonationController extends Controller
 
         $donation->name = $request->name;
         $donation->email = $request->email;
-        $donation->address = $request->address;
         $donation->mobile = $request->mobile;
+        $donation->address = $request->address;
+        $donation->status = $request->status;
+        $donation->account_name = $request->account_name;
+        $donation->account_number = $request->account_number;
+        $donation->bank_name = $request->bank_name;
+        $donation->message = $request->message;
+
 
         $donation->save();
 
