@@ -25,7 +25,7 @@
                                         <th>Email</th>
 
                                        
-                                        <th>Control</th>
+                                        <!-- <th>Control</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -44,7 +44,7 @@
 
 
                                         
-                                        <td class="center"><a href="{{url('/donation/edit/'.$singledonation->id)}}">Edit</a>|<a href="{{url('/donation/delete/'.$singledonation->id)}}">Delete</td>
+                                        <td class="center"><a href="{{url('/donation/edit/'.$singledonation->id)}}"></a><a href="{{url('/donation/delete/'.$singledonation->id)}}"></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -63,7 +63,7 @@ class ApplyDonationController extends Controller
 
         Mail::send('email.send',['name'=>'Hello'],function($message)
         {
-            $message->to('suraudeveloper@gmail.com','New Form')->from('luturahmankhan@gmail.com')->subject("Fund Request");
+            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Fund Request");
         });
 
         Session::flash('success','You have succesfully sent the request, We will let you know if your request accepted');

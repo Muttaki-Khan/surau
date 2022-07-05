@@ -18,7 +18,6 @@
                                           <th scope="col">Name</th>
                                           <th scope="col">Email</th>
                                           <th scope="col">Mobile</th>
-                                          <th scope="col">Amount Given</th>
 
                                           <th scope="col">Action</th>                                     
                                         </tr>
@@ -70,10 +69,11 @@
                                            
                                         <div class="form-group">
                                         	<input type="submit" class="btn btn-block btn-primary" value="Approve">
+                                            <a class="btn btn-block btn-primary" href="{{url('/showDonation/view/'.$donation->id)}}">View</a>
+
                                         </div>	
                                     {!! Form::close() !!}
                                                 <!-- <a href="{!! route('donation.delete', ['id'=>$donation->id]) !!}" class="btn btn-success">Approve</a> -->
-                                                <td><a class="btn btn-block btn-primary" href="{{url('/showDonation/view/'.$donation->id)}}">View</a></td>
 
                                             </td>
                                         </tr>
