@@ -6,6 +6,7 @@ use App\contacts;
 use App\applymembers;
 use Illuminate\Http\Request;
 use App\members;
+use Mail;
 
 
 
@@ -54,6 +55,11 @@ class ApplyMemberController extends Controller
         $member->address = $request->address;
 
         $member->save();
+
+        Mail::send('email.member',['name'=>'Hello'],function($message)
+        {
+            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Fund Request");
+        });
 
         Session::flash('success','You have succesfully sent the request, We will let you know if your request accepted');
 

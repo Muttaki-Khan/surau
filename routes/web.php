@@ -182,6 +182,8 @@ Route::get('/donation/kill/{id}',[
 ]);
 
 
+Route::get('/invoice/{id}','DonationController@pdf');
+
 
 //============= Admin.Message =============
 Route::post('/newMsg','MessageController@store');
@@ -256,6 +258,7 @@ Route::get('/msg/kill/{id}',[
 	Route::get('/donation/entry', 'DonationController@index');
     Route::post('/donation/entry', 'DonationController@save');
     Route::get('/donation/manage','DonationController@manage');
+	Route::get('/donation/view/{id}','DonationController@show');
 	Route::get('/donation/edit/{id}','DonationController@edit');
 	Route::post('/donation/edit','DonationController@update');
 	Route::get('/donation/delete/{id}','DonationController@delete');

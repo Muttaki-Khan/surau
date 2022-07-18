@@ -18,6 +18,7 @@ use DB;
 Auth::routes();
 use Illuminate\Support\Facades\Route; 
 use Session;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class DonationController extends Controller
 {
@@ -79,6 +80,27 @@ public function indelete($id){
         return redirect('/donation/manage')->with('message','Data insert successfully.');
 
   }
+
+  public function show($id)
+  {
+      $donation = DB::table('donations')
+                          ->where('donations.id',$id)
+                          ->first();
+
+      return view('admin.home.viewFunding',compact('donation'));
+    
+  }
+
+  public function pdf($id) {
+    $test = 'khannnnn';
+  
+    $donation = DB::table('applydonations')
+                          ->where('applydonations.id',$id)
+                          ->first();                    
+    $pdf = PDF::loadView('admin.home.invoice',array('test'=>$test, 'donation'=>$donation));
+    return $pdf->download('invoice.pdf');
+}
+
 public function manage(){
 
     $donations = DB::table('donations')->get();

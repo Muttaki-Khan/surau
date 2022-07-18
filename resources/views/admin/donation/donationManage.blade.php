@@ -23,9 +23,7 @@
                                         <th>Address</th>
                                         <th>Mobile</th>
                                         <th>Email</th>
-
-                                       
-                                        <!-- <th>Control</th> -->
+                                        <th>Control</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,11 +38,9 @@
 										<td>{{$singledonation->address}}</td>
                                         <td>{{$singledonation->mobile}}</td>
                                         <td>{{$singledonation->email}}</td>
-
-
-
+                                        <td><a class="btn btn-block btn-primary" href="{{url('/donation/view/'.$singledonation->id)}}">View</a></td>
                                         
-                                        <td class="center"><a href="{{url('/donation/edit/'.$singledonation->id)}}"></a><a href="{{url('/donation/delete/'.$singledonation->id)}}"></td>
+                                        <!-- <td class="center"><a href="{{url('/donation/edit/'.$singledonation->id)}}"></a><a href="{{url('/donation/delete/'.$singledonation->id)}}"></td> -->
                                     </tr>
                                     @endforeach
                                 </tbody>

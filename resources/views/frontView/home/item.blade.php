@@ -53,12 +53,12 @@
                                <!-- <div class="author-image">
                                    <img src="{{asset("frontEnd/images/1.jpg")}}" loading="lazy" class="img-fluid rounded-circle" title="Adam Ster" alt="author image">
                                </div> -->
-                               <div class="course-title">
-                                   <a href="#url">{{$item->itemName}}</a>
-                               </div>
-                           </div>
-                       </div>
 
+                           </div>
+                       </div><br><br>
+                       <div class="course-title">
+                                   <a href="#url"  style="color:black; font-size:25px">{{$item->itemName}}</a><br>
+                        </div><br><br>
                    </div>
                </div>                
                                     

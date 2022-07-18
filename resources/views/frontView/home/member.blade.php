@@ -33,54 +33,8 @@
 @endsection
 
 @section('feature')
+
 <section class="contact-area section-gap">
-
-		<div class="container">
-			<div class="row align-items-start">
-            <?php 
-    $i=0;
-     ?>
-    <div class="panel-body">
-        <h2 class="{{$font}}" >Members List</h2>
-
-    <input type="text" id="myInput" onkeyup="myFunction()" 
-    placeholder="Search for names.." title="Type in a name" style="">
-
-    <!-- <a href="applymember"><button type="button" class="btn btn-primary">Apply For Membership</button></a> -->
-
-                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                <thead>
-                                    <tr>
-                                        <th class="{{$font}}">SI.</th>
-                                        <th class="{{$font}}">Member Name</th>
-                                        <th class="{{$font}}">Mobile</th>
-                                        <th class="{{$font}}">Email</th>
-                                        <th class="{{$font}}">Address</th>
-                                        
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($members as $item)
-                                    <tr>
-                                        <td class="{{$font}}">{{++$i}}</td>
-                                        <td class="{{$font}}">{{$item->name}}</td>
-                                        <td class="{{$font}}">{{$item->mobile}}</td>
-                                        <td class="{{$font}}">{{$item->email}}</td>      
-                                        <td class="{{$font}}">{{$item->address}}</td>
-                                     
-                                        
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                            {{$members->links()}}
-
-                        </div>
-			</div>
-		</div>
-	</section>
-
-    <section class="contact-area section-gap">
 
 		<div class="container">
 			<div class="row align-items-start">
@@ -124,6 +78,54 @@
 						
 							</div>
 							</form>
+
+                        </div>
+			</div>
+		</div>
+	</section>
+
+    
+<section class="contact-area section-gap">
+
+		<div class="container">
+			<div class="row align-items-start">
+            <?php 
+    $i=0;
+     ?>
+    <div class="panel-body">
+        <h2 class="{{$font}}" >Members List</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" 
+    placeholder="Search for names.." title="Type in a name" style="">
+
+    <!-- <a href="applymember"><button type="button" class="btn btn-primary">Apply For Membership</button></a> -->
+
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th class="{{$font}}">SI.</th>
+                                        <th class="{{$font}}">Member Name</th>
+                                        <!-- <th class="{{$font}}">Mobile</th> -->
+                                        <th class="{{$font}}">Email</th>
+                                        <!-- <th class="{{$font}}">Address</th> -->
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($members as $item)
+                                    <tr>
+                                        <td class="{{$font}}">{{++$i}}</td>
+                                        <td class="{{$font}}">{{$item->name}}</td>
+                                        <!-- <td class="{{$font}}">{{$item->mobile}}</td> -->
+                                        <td class="{{$font}}">{{$item->email}}</td>      
+                                        <!-- <td class="{{$font}}">{{$item->address}}</td> -->
+                                     
+                                        
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            {{$members->links()}}
 
                         </div>
 			</div>

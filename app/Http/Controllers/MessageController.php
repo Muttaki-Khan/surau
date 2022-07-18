@@ -6,6 +6,7 @@ use Session;
 use App\contacts;
 use App\messages;
 use Illuminate\Http\Request;
+use Mail;
 
 class MessageController extends Controller
 {
@@ -52,6 +53,11 @@ class MessageController extends Controller
         $msg->message = $request->message;
 
         $msg->save();
+
+        Mail::send('email.feedback',['name'=>'Hello'],function($message)
+        {
+            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Fund Request");
+        });
 
         Session::flash('success','You are succesfully sent the message');
 
