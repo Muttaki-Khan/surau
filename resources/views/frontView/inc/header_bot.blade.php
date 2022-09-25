@@ -20,17 +20,12 @@
 <!-- header-bot -->
 <div class="header-bot"  >
 	<div class="container">
-		<div class="col-md-3 header-left">
-
-			<!-- <h1><a href="index.html" ><img class="imglogo" id="logoID"  src="{{ asset('frontEnd') }}/images/mainlogo.png"></a></h1> -->
-			<a href=""><img class="imglogo" id="logoID"></a>
-
-		</div>
+		
 		
 		<div class="col-md-8 header-right footer-bottom">
 
 			<ul>
-				
+      <a href=""><img class="imglogo col-md-3 header-left" id="logoID"></a>
 
 @if (Auth::guest())  
    

@@ -47,7 +47,7 @@ class StaffController extends Controller
       $staffPic->pic=$picUrl;
       $staffPic->save();
 
-      return redirect('/staff/entry')->with('message','staff insert successfully');
+      return redirect('/staff/manage')->with('message','staff insert successfully');
 
   }
 

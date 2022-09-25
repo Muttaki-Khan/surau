@@ -15,7 +15,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="cta-text">
                                 <h4>Find us</h4>
-                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                                <span>Seksyen, Jalan Nova U5/74,<br><br>U5 Shah Alam, 40150 Shah Alam, Selangor</span>
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                             <i class="fas fa-phone"></i>
                             <div class="cta-text">
                                 <h4>Call us</h4>
-                                <span>9876543210 0</span>
+                                <span>+60 19-758 9946</span>
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
   margin-bottom: 30px;
 }
 .footer-logo img {
-    max-width: 200px;
+    max-width: 100px;
 }
 .footer-text p {
   margin-bottom: 14px;

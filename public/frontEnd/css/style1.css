@@ -107,7 +107,7 @@ label{
 
 /*-- header-bot --*/
 .header-left img {
-    width: 73%;
+    width: 23%;
 }
 .header-middle {
     margin-top: 11px;
@@ -1679,6 +1679,7 @@ a.single-item{
 	border: 0;
 	margin: 0 px;
 	margin-left: -50px;
+	max-width: 100px;
   }
 
 
@@ -4630,8 +4631,9 @@ td.invert-image a img {
 		margin: 0;
 	}
 	.header-left {
-		width: 37%;
+		width: 17%;
 		margin: 0 auto 9px;
+		text-align: center;
 	}
 	.header-middle input[type="search"] {
 		padding: 6px 10px;
@@ -4662,7 +4664,7 @@ td.invert-image a img {
 		width: 100%;
 	}
 	.header-right ul {
-		margin-top: 31px;
+		margin-top: 5px;
 		text-align: center;
 	}
 	.footer-bottom a span {
