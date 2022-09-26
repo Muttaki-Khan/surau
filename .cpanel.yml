@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/suradnhs/
+    - export DEPLOYPATH=/home/suradnhs/public_html/
     - /bin/cp -r * $DEPLOYPATH
