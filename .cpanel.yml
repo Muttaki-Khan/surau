@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/suradnhs/public_html/
     - /bin/cp -r * $DEPLOYPATH
     
+
