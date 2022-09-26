@@ -4,7 +4,7 @@ deployment:
     - rm -rf /home/suradnhs/public_html/
     - cd /home/suradnhs/
     - mkdir public_html
-    - chmod public_html 750
+    - chmod 750 public_html
     - export DEPLOYPATH=/home/suradnhs/public_html/
     - /bin/cp -r * $DEPLOYPATH
     - ln -s /home/suradnhs/public /home/suradnhs/public_html/
