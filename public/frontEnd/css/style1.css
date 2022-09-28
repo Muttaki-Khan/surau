@@ -4,6 +4,10 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+.pb-5,
+.py-5 {
+    padding-bottom: 2rem !important;
+}
 
 .font1{
 	font-family: "Times New Roman", Times, serif;

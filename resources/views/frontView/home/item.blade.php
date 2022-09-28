@@ -1,6 +1,3 @@
-
-
-
 @extends('frontView.master')
 
 @section('title_area')
@@ -11098,7 +11095,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-    padding-top: 3rem !important;
+    padding-top: 0rem !important;
 }
 
 .pr-5,

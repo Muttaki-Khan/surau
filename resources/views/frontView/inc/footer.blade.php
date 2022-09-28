@@ -120,13 +120,13 @@
   position: relative;
 }
 .footer-cta {
-  border-bottom: 1px solid #373636;
+  border-bottom: 3px solid #373636;
 }
 .single-cta i {
   color:  #71706E;
   font-size: 30px;
   float: left;
-  margin-top: 8px;
+  margin-top: 0px;
 }
 .cta-text {
   padding-left: 15px;
