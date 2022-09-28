@@ -85,12 +85,12 @@
                                     <i class="fa fa-support fa-4x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Category</div>
-                                    <div>Category</div>
+                                    <div class="huge">Control</div>
+                                    <div>Theme control</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="{{ url('/category/manage')}}">
+                        <a href="{{ url('/theme/manage')}}">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
