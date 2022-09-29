@@ -45,10 +45,10 @@
 
 
 		  <h2 class="{{$font}}">Make Donations</h2><br>
-			<p class="{{$font}}"><b>Make Donations, Below is our account</b></p><br>
-			<p class="{{$font}}">AC No: 2303035529001</p><br>
-			<p class="{{$font}}">Ac Name: MD HABIB AL MUTTAKI KHAN</p><br>
-			<p class="{{$font}}">Bank: THE CITY BANK</p><br>
+			<p class="{{$font}}"><b>Below is our account</b></p><br><br>
+			<p class="{{$font}}">AC No: 2303035529001</p><br><br>
+			<p class="{{$font}}">Ac Name: MD HABIB AL MUTTAKI KHAN</p><br><br>
+			<p class="{{$font}}">Bank: THE CITY BANK</p><br><br>
 			<p class="{{$font}}">Branch: BANDAR BAZAR, SYLHET</p><br><br><br>
 </div>
 		  <form class="contact-form" action="{{url('incomingdonation')}}" method="post">

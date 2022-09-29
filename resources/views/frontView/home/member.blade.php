@@ -114,10 +114,10 @@
                                 <tbody>
                                     @foreach($members as $item)
                                     <tr>
-                                        <td class="{{$font}}">{{++$i}}</td>
-                                        <td class="{{$font}}">{{$item->name}}</td>
+                                        <td class="{{$font}}" style="font-size:15px">{{++$i}}</td>
+                                        <td class="{{$font}}" style="font-size:15px">{{$item->name}}</td>
                                         <!-- <td class="{{$font}}">{{$item->mobile}}</td> -->
-                                        <td class="{{$font}}">{{$item->email}}</td>      
+                                        <td class="{{$font}}" style="font-size:15px">{{$item->email}}</td>      
                                         <!-- <td class="{{$font}}">{{$item->address}}</td> -->
                                      
                                         
