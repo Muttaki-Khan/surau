@@ -120,7 +120,7 @@ class ApplyDonationController extends Controller
     {
         $donation = applydonations::find($id);
         $donation->delete();
-        Session::flash('success','You are read the message.');
+        Session::flash('success','You have read the message.');
         return redirect()->back();
 
 
@@ -137,7 +137,7 @@ class ApplyDonationController extends Controller
 
         $item->forceDelete();
 
-        Session::flash('success','You are succesfully deleted the message.');
+        Session::flash('success','You have succesfully deleted the message.');
 
         return redirect()->back();
     }

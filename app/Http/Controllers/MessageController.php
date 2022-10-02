@@ -56,10 +56,10 @@ class MessageController extends Controller
 
         Mail::send('email.feedback',['name'=>'Hello'],function($message)
         {
-            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Fund Request");
+            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Feedback");
         });
 
-        Session::flash('success','You are succesfully sent the message');
+        Session::flash('success','You have succesfully sent the message');
 
         return redirect()->back();
     }
@@ -110,7 +110,7 @@ class MessageController extends Controller
 
         $msg->delete();
 
-        Session::flash('success','You are read the message.');
+        Session::flash('success','You have read the message.');
 
         return redirect()->back();
     }
@@ -126,7 +126,7 @@ class MessageController extends Controller
 
         $item->forceDelete();
 
-        Session::flash('success','You are succesfully deleted the message.');
+        Session::flash('success','You have succesfully deleted the message.');
 
         return redirect()->back();
     }

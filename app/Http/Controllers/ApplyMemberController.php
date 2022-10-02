@@ -58,7 +58,7 @@ class ApplyMemberController extends Controller
 
         Mail::send('email.member',['name'=>'Hello'],function($message)
         {
-            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Fund Request");
+            $message->to('suraudeveloper@gmail.com','New Form')->from('suraudeveloper@gmail.com')->subject("Member Request");
         });
 
         Session::flash('success','You have succesfully sent the request, We will let you know if your request accepted');
@@ -110,7 +110,7 @@ class ApplyMemberController extends Controller
     {
         $member = applymembers::find($id);
         $member->delete();
-        Session::flash('success','You are read the message.');
+        Session::flash('success','You have read the message.');
         return redirect()->back();
 
 
@@ -127,7 +127,7 @@ class ApplyMemberController extends Controller
 
         $item->forceDelete();
 
-        Session::flash('success','You are succesfully deleted the message.');
+        Session::flash('success','You have succesfully deleted the message.');
 
         return redirect()->back();
     }

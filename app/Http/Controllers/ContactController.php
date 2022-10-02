@@ -45,7 +45,7 @@ class ContactController extends Controller
 
     	$contact->save();
 
-    	Session::flash('success','You are succesfully created a contact-info.');
+    	Session::flash('success','You have succesfully created a contact-info.');
 
     	return redirect()->back();
     }
@@ -81,7 +81,7 @@ class ContactController extends Controller
 
         $contact->save();
 
-        Session::flash('success','Your are succesfully updated this.');
+        Session::flash('success','Your have succesfully updated this.');
 
         return redirect('info2');
     }
@@ -91,7 +91,7 @@ class ContactController extends Controller
 
         $contact->delete();
 
-        Session::flash('success','You are succesfully deleted this.');
+        Session::flash('success','You have succesfully deleted this.');
 
         return redirect()->back();
     }
