@@ -183,6 +183,8 @@ Route::get('/donation/kill/{id}',[
 
 
 Route::get('/invoice/{id}','DonationController@pdf');
+Route::get('/donation/download','DonationController@getFile');
+
 
 
 //============= Admin.Message =============

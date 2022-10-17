@@ -103,8 +103,10 @@
 <div class="col-lg-9 d-flex flex-column">
 
 		  <h2 class="{{$font}}">Apply For Fundings</h2><br>
-			
+		  <h3 class="{{$font}}">Download below form or apply through our website</h3><br>
+		  <a type="button" href="{{ url('/donation/download/?file=FORM.pdf')}}" class="btn btn-success">Download Form</a><br><br>
 </div>
+
 		  <form class="contact-form" action="{{url('newDonation')}}" method="post">
 					{{ csrf_field() }}
 					<div class="row">
@@ -148,7 +150,7 @@
 					
 					
 							<div class="form-group">
-							<textarea class="form-control" name="message" placeholder="Hantar mesej" onfocus="this.placeholder = ''"
+							<textarea class="form-control" name="message" placeholder="Nyatakan sebab memohon" onfocus="this.placeholder = ''"
 							 onblur="this.placeholder = 'Post a message'" required=""></textarea>
 							</div>
 

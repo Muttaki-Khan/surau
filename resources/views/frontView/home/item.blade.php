@@ -54,7 +54,7 @@
                            </div>
                        </div><br><br>
                        <div class="course-title">
-                                   <a href="#url"  style="color:black; font-size:25px">{{$item->itemName}}</a><br>
+                                   <a href="#url"  style="color:black; font-size:20px">{{$item->itemName}}</a><br>
                         </div><br><br>
                    </div>
                </div>                

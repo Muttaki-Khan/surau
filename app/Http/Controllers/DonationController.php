@@ -19,6 +19,7 @@ Auth::routes();
 use Illuminate\Support\Facades\Route; 
 use Session;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\Storage;
 
 class DonationController extends Controller
 {
@@ -99,6 +100,17 @@ public function indelete($id){
                           ->first();                    
     $pdf = PDF::loadView('admin.home.invoice',array('test'=>$test, 'donation'=>$donation));
     return $pdf->download('invoice.pdf');
+}
+
+public function getFile(Request $request) {
+        
+  if(Storage::disk('local')->exists("pdf/$request->file")) {
+
+      $path = Storage::disk('local')->path("pdf/$request->file");
+      $content = file_get_contents($path);
+      return response($content)->withHeaders(['Content-Type' => mime_content_type($path)]);
+  }
+  return redirect('/404');
 }
 
 public function manage(){
