@@ -44,9 +44,7 @@
 
                 @endif   
 
-				<li><a class="fb" href="https://www.facebook.com/"></a></li>
-				<li><a class="twi" href="https://twitter.com/"></a></li>
-				<li><a class="insta" href="https://www.instagram.com/"></a></li>
+				<li><a class="fb" href="https://www.facebook.com/groups/1040675846364793"></a></li>
 				<li><a class="you" href="https://www.youtube.com/"></a></li>
 			</ul>
 

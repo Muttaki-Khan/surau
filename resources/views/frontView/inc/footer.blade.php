@@ -33,7 +33,7 @@
                             <i class="far fa-envelope-open"></i>
                             <div class="cta-text">
                                 <h4>Mail us</h4>
-                                <span>mail@info.com</span>
+                                <span>duraudeveloper@gmail.com</span>
                             </div>
                         </div>
                     </div>
@@ -52,9 +52,8 @@
                             </div>
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <a href="https://www.facebook.com/groups/1040675846364793"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="https://www.youtube.com/channel/UCrQ3T4wxicJHDWlpKt5375w"><i class="fab fa-youtube twitter-bg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -64,16 +63,14 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
+                                <li><a href="{{url('/')}}">Home</a></li>
+                                <li><a href="{{url('/staff')}}">Staff</a></li>
+                                <li><a href="{{url('/item')}}">Aktiviti</a></li>
+                                <li><a href="{{url('/video')}}">Video Kuliah</a></li>
+                                <li><a href="{{url('/introduction')}}">About us</a></li>
+                                <li><a href="{{url('/member')}}">Member</a></li>
+                                <li><a href="{{url('/goals')}}">History</a></li>
+                                <li><a href="{{url('/contact')}}">Contact us</a></li>
                             </ul>
                         </div>
                     </div>

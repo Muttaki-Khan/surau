@@ -20,7 +20,7 @@
                                     <tr>
                                         <th>SI.</th>
                                         <th>Introduction</th>
-                                        <th>Goals</th>
+                                        <th>History</th>
                                        
                                         <th>Control</th>
                                     </tr>

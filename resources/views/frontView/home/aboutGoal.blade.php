@@ -31,7 +31,7 @@
 		
 	<div class="panel-body">
 		
-		      <font face = "Times New Roman" class="{{$font}}" size = "5" style="font-size:1.5vw;">Goals</font><br />
+		      <font face = "Times New Roman" class="{{$font}}" size = "5" style="font-size:1.5vw;">History</font><br />
 
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>

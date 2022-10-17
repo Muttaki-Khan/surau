@@ -51,10 +51,10 @@
                            
                        </div><br>
                        <div class="course-title">
-                                   <a href="#url"  style="color:black; font-size:25px">{{$video->lecturer_name}}</a><br>
+                                   <a href="#url"  style="color:black; font-size:18px">{{$video->video_title}}</a><br>
                         </div><br><br>
                         <div class="course-title">
-                                   <a href="#url"  style="color:black; font-size:20px">{{$video->video_title}}</a><br>
+                                   <a href="#url"  style="color:black; font-size:15px">{{$video->lecturer_name}}</a><br>
                         </div><br><br>
                        <a href="{{url('/lectureById='.$video->id)}}" class="{{$theme}} btn btn-light btn-block"><strong>Play Video</strong></a>
 

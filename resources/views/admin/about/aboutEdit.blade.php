@@ -21,7 +21,7 @@
                                         
                                         </div>
                                         <div class="form-group">
-                                            <label>Goals</label>
+                                            <label>History</label>
                                             <textarea class="form-control" name="goals"  placeholder="Enter description"> {{$about->goals}} </textarea>
                                         </div>
                                         

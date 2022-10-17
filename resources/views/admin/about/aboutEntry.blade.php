@@ -22,7 +22,7 @@
                                             <textarea class="form-control" name="introduction" placeholder="Enter description"> </textarea>
                                         </div>
                                          <div class="form-group">
-                                            <label>Goals</label>
+                                            <label>History</label>
                                             <textarea class="form-control" name="goals" placeholder="Enter description"> </textarea>
                                         </div>
                                         <div class="form-group">
