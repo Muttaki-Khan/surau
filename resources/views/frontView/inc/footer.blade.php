@@ -33,7 +33,7 @@
                             <i class="far fa-envelope-open"></i>
                             <div class="cta-text">
                                 <h4>Mail us</h4>
-                                <span>duraudeveloper@gmail.com</span>
+                                <span>suraudeveloper@gmail.com</span>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                                 <h3>Sign Up</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>To give feedback and become our member, you have to signup to our portal</p>
+                                <p>To get latest news and update</p>
                             </div>
                             <div class="subscribe-form">
                                 <!-- <form action="#">
