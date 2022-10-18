@@ -116,31 +116,19 @@ function myFunction() {
   }
 }
 </script>
+
 <script>
-	let cards = document.querySelectorAll('.box')
-    
-	function liveSearch() {
-		let search_query = document.getElementById("searchbox").value;
-		
-		//Use innerText if all contents are visible
-		//Use textContent for including hidden elements
-		for (var i = 0; i < cards.length; i++) {
-			if(cards[i].textContent.toLowerCase()
-					.includes(search_query.toLowerCase())) {
-				cards[i].classList.remove("is-hidden");
-			} else {
-				cards[i].classList.add("is-hidden");
-			}
-		}
-	}
-	
-	//A little delay
-	let typingTimer;               
-	let typeInterval = 500;  
-	let searchInput = document.getElementById('searchbox');
-	
-	searchInput.addEventListener('keyup', () => {
-		clearTimeout(typingTimer);
-		typingTimer = setTimeout(liveSearch, typeInterval);
-	});
+	function myFunction2() {
+  var input = document.getElementById("Search");
+  var filter = input.value.toLowerCase();
+  var nodes = document.getElementsByClassName('target');
+
+  for (i = 0; i < nodes.length; i++) {
+    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+      nodes[i].style.display = "block";
+    } else {
+      nodes[i].style.display = "none";
+    }
+  }
+}
 </script>

@@ -37,12 +37,16 @@
 <section class="w3l-offered-courses">
         <div class="blog py-5" id="blog">
             <div class="containerv pb-lg-5">
-            <input type="text" placeholder="Search Users" id="filter_users"/>
-                <div class="row">
+
+            <input type="text" id="Search" onkeyup="myFunction2()" 
+            placeholder="Search for title.." title="Type in a name" style="">
+    
+    <div class="row">
 
 @foreach ($lecture as $video)
 
 <div class="col-lg-4 col-md-6 item">
+<div class="target">
 
                    <div class="card">
                        <div class="card-header p-0 position-relative">
@@ -55,9 +59,8 @@
 
 
                        <div class="course-title">
-                       <ul id="users-list">
-                            <a href="#url"  style="color:black; font-size:18px">{{$video->video_title}}</a></td><br>
-</ul>
+                          <a href="#url"  style="color:black; font-size:18px">{{$video->video_title}}</a><br>
+
                                 </div><br><br>
                         <div class="course-title">
                                    <a href="#url"  style="color:black; font-size:15px">{{$video->lecturer_name}}</a><br>
@@ -67,8 +70,7 @@
                    </div>
                </div>                
                         
-                               
-                          
+</div>         
 @endforeach
                 </div>
 
