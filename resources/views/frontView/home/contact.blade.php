@@ -42,7 +42,7 @@
 				<div class="offset-lg-1 col-lg-5 col-md-6"><br><br>
 					<div class="section-title relative">
 						      <!-- <font face = "Times New Roman" class="{{$font}}" size = "5" style="font-size:4vw;">Contact Us</font><br/> -->
-							  <h2 class="{{$font}}">Contact Us</h2><br>
+							  <h2 class="{{$font}}">Hubungi Kami</h2><br>
 
    				 <h4 style="color: green;">{{Session::get('success')}}</h4>
 

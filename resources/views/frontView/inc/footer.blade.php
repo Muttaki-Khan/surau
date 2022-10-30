@@ -14,7 +14,7 @@
                         <div class="single-cta">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="cta-text">
-                                <h4>Find us</h4>
+                                <h4>Cari Kami</h4>
                                 <span>Seksyen, Jalan Nova U5/74,<br><br>U5 Shah Alam, 40150 Shah Alam, Selangor</span>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                         <div class="single-cta">
                             <i class="fas fa-phone"></i>
                             <div class="cta-text">
-                                <h4>Call us</h4>
+                                <h4>Hubungi Kami</h4>
                                 <span>+60 19-758 9946</span>
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                         <div class="single-cta">
                             <i class="far fa-envelope-open"></i>
                             <div class="cta-text">
-                                <h4>Mail us</h4>
+                                <h4>Email Kami</h4>
                                 <span>suraudeveloper@gmail.com</span>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                                 elit,Lorem ipsum dolor sit amet.</p> -->
                             </div>
                             <div class="footer-social-icon">
-                                <span>Follow us</span>
+                                <span>Ikuti Kami</span>
                                 <a href="https://www.facebook.com/groups/1040675846364793"><i class="fab fa-facebook-f facebook-bg"></i></a>
                                 <a href="https://www.youtube.com/channel/UCrQ3T4wxicJHDWlpKt5375w"><i class="fab fa-youtube twitter-bg"></i></a>
                             </div>
@@ -64,23 +64,23 @@
                             </div>
                             <ul>
                                 <li><a href="{{url('/')}}">Home</a></li>
-                                <li><a href="{{url('/staff')}}">Staff</a></li>
+                                <li><a href="{{url('/staff')}}">Staf</a></li>
                                 <li><a href="{{url('/item')}}">Aktiviti</a></li>
                                 <li><a href="{{url('/video')}}">Video Kuliah</a></li>
-                                <li><a href="{{url('/introduction')}}">About us</a></li>
-                                <li><a href="{{url('/member')}}">Member</a></li>
-                                <li><a href="{{url('/goals')}}">History</a></li>
-                                <li><a href="{{url('/contact')}}">Contact us</a></li>
+                                <li><a href="{{url('/introduction')}}">Mengenai Kami</a></li>
+                                <li><a href="{{url('/member')}}">Ahli</a></li>
+                                <li><a href="{{url('/goals')}}">Sejarah</a></li>
+                                <li><a href="{{url('/contact')}}">Hubungi Kami</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
-                                <h3>Sign Up</h3>
+                                <h3>Daftarlah</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>To get latest news and update</p>
+                                <p>dapatkan berita terkini</p>
                             </div>
                             <div class="subscribe-form">
                                 <!-- <form action="#">

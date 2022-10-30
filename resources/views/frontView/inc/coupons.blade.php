@@ -14,7 +14,7 @@
 			</div> -->
 			<div class="col-md-3 coupons-gd">
 				<a href="contact" ><span class="glyphicon glyphicon-credit-card {{$theme}} {{$textcolor}}" aria-hidden="true"></span></a>
-				<h4 class="{{$font}} {{$textcolor}}">SEND US FEEDBACK</h4>
+				<h4 class="{{$font}} {{$textcolor}}">HANTAR MAKLUM BALAS</h4>
 			</div>
 			<div class="col-md-3 coupons-gd">
 				<a href="item" ><span class="glyphicon glyphicon-credit-card {{$theme}} {{$textcolor}}" aria-hidden="true"></span></a>

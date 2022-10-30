@@ -95,7 +95,7 @@
 		@foreach($latest as $last)
 
 			<div class="col-md-4 new-gd-middle">
-			<img src="{{$last->pic}}" alt="soft-men21" height='400px' />
+			<img src="{{$last->pic}}" alt="soft-men21" height='300px' />
 
 				<div class="wed-brand simpleCart_shelfItem">
 				</div>
@@ -105,7 +105,7 @@
 		
 		@foreach($latest2 as $last)
 			<div class="col-md-4 new-gd-middle">
-				<img src="{{$last->pic}}" alt="soft-men21"  height='400px' />
+				<img src="{{$last->pic}}" alt="soft-men21"  height='300px' />
 				<div class="wed-brandtwo simpleCart_shelfItem">
 					
 				</div>
@@ -115,7 +115,7 @@
 		@foreach($latest3 as $last)
 
 			<div class="col-md-4 new-gd-middle">
-				<img src="{{$last->pic}}" alt="soft-men21"  height='400px'/>
+				<img src="{{$last->pic}}" alt="soft-men21"  height='300px'/>
 				<div class="wed-brandtwo simpleCart_shelfItem">
 					<!-- <h4>Local Collection</h4> -->
 					

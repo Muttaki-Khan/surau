@@ -26,10 +26,10 @@
 									</div> -->
 									<div class="col-sm-3 multi-gd-img" style="width:100%">
 										<ul class="multi-column-dropdown" >
-											<li><a href="introduction">Information</a></li>
-											<li><a href="goals">History</a></li>
+											<li><a href="introduction">Maklumat</a></li>
+											<li><a href="goals">Sejarah</a></li>
 											<li><a href="staff">Surau Committee</a></li>
-											<li><a href="contact">Contact</a></li>
+											<li><a href="contact">Hubungi</a></li>
 											
 											
 										</ul>
