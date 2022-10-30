@@ -88,7 +88,7 @@
 
 <div class="soft_new_arrivals">
 	<div class="container">
-		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>Activiti </span></h3>
+		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>Aktiviti </span></h3>
 		<div class="new_grids">
 		
 

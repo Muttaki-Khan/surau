@@ -60,7 +60,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
-                                <h3>Useful Links</h3>
+                                <h3>Pautan Lain</h3>
                             </div>
                             <ul>
                                 <li><a href="{{url('/')}}">Home</a></li>
@@ -80,7 +80,7 @@
                                 <h3>Daftarlah</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>dapatkan berita terkini</p>
+                                <p>Dapatkan Berita Terkini</p>
                             </div>
                             <div class="subscribe-form">
                                 <!-- <form action="#">
