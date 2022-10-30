@@ -46,12 +46,12 @@
 
    				 <h4 style="color: green;">{{Session::get('success')}}</h4>
 
-							<h2 class="{{$font}}">Address</h2> <br>
+							<h2 class="{{$font}}">Alamat</h2> <br>
 							
 						
 						<div class="mb-20">
 							@foreach($contact as $contact)
-							<p class="{{$font}}">{{ $contact->address }}</p><br><br>
+							<h4 class="{{$font}}">{{ $contact->address }}</h4><br><br>
 							
 						</div>
 						<div class="mb-20">
@@ -74,7 +74,7 @@
 						<div class="row">
 							<div class="col-lg-12 d-flex flex-column mb-20">
 								<div class="form-group">
-								<input name="name" placeholder="Contact Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
+								<input name="name" placeholder="Nama" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'"
 								 class="form-control" required="" type="text">
 								</div>
 							</div>
@@ -82,7 +82,7 @@
 						
 							<div class="col-lg-12 d-flex flex-column mb-20">
 								<div class="form-group">
-								<input name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
+								<input name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
 								 class="form-control" required="" type="email">
 								</div>
 							</div>
@@ -90,7 +90,7 @@
 						
 							<div class="col-lg-12 d-flex flex-column mb-20">
 								<div class="form-group">
-								<input name="number" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
+								<input name="number" placeholder="Nombor Telefon" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'"
 								 class="form-control" required="" type="text">
 								</div>
 							</div>
@@ -98,7 +98,7 @@
 						
 							<div class="col-lg-12 d-flex flex-column">
 								<div class="form-group">
-								<textarea class="form-control" name="message" placeholder="Post a message" onfocus="this.placeholder = ''"
+								<textarea class="form-control" name="message" placeholder="Mesej" onfocus="this.placeholder = ''"
 								 onblur="this.placeholder = 'Post a message'" required=""></textarea>
 								</div>
 							</div>
@@ -106,7 +106,7 @@
 						
 							<div class="col-lg-12 d-flex justify-content-end">
 								<div class="form-group">
-								<button type="submit" class="primary-btn mt-30 text-uppercase">Send Message</button>
+								<button type="submit" class="primary-btn mt-30 text-uppercase">Menghantar Mesej</button>
 								</div>
 							</div>
 						
