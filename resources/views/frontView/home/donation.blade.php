@@ -43,13 +43,11 @@
 <div class="col-lg-9 d-flex flex-column">
 <h2 style="color: green;">{{Session::get('success')}}</h2>
 
-
-		  <h2 class="{{$font}}">Make Donations</h2><br>
-			<p class="{{$font}}"><b>Below is our account</b></p><br><br>
-			<p class="{{$font}}">AC No: 2303035529001</p><br><br>
-			<p class="{{$font}}">Ac Name: MD HABIB AL MUTTAKI KHAN</p><br><br>
-			<p class="{{$font}}">Bank: THE CITY BANK</p><br><br>
-			<p class="{{$font}}">Branch: BANDAR BAZAR, SYLHET</p><br><br><br>
+		  <h2 class="{{$font}}">Membuat Sumbangan</h2><br>
+			<p class="{{$font}}"><b>[ Tabung Sumbangan Jemaah ]*_</b></p><br><br>
+			<p class="{{$font}}">AC No: 86-0059182-9</p><br><br>
+			<p class="{{$font}}">Ac Name: Surau Al-Hikmah</p><br><br>
+			<p class="{{$font}}">Bank: CIMB Islamik</p><br><br>
 </div>
 		  <form class="contact-form" action="{{url('incomingdonation')}}" method="post">
 					{{ csrf_field() }}
@@ -102,8 +100,8 @@
 
 <div class="col-lg-9 d-flex flex-column">
 
-		  <h2 class="{{$font}}">Apply For Fundings</h2><br>
-		  <h3 class="{{$font}}">Download below form or apply through our website</h3><br>
+		  <h2 class="{{$font}}">Memohon Pembiayaan</h2><br>
+		  <h3 class="{{$font}}">Muat turun borang di bawah atau mohon melalui laman web kami</h3><br>
 		  <a type="button" href="{{ url('/donation/download/?file=FORM.pdf')}}" class="btn btn-success">Download Form</a><br><br>
 </div>
 
