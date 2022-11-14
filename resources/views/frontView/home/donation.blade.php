@@ -41,13 +41,13 @@
     <div class="panel-body">
 
 <div class="col-lg-9 d-flex flex-column">
-<h2 style="color: green;">{{Session::get('success')}}</h2>
-
-		  <h2 class="{{$font}}">Membuat Sumbangan</h2><br>
-			<p class="{{$font}}"><b>[ Tabung Sumbangan Jemaah ]*_</b></p><br><br>
-			<p class="{{$font}}">AC No: 86-0059182-9</p><br><br>
-			<p class="{{$font}}">Ac Name: Surau Al-Hikmah</p><br><br>
+<h2 style="color: green;">{{Session::get('success')}}</h2>:
+		  <h2 class="{{$font}}">Sumbangan</h2><br>
+			<p class="{{$font}}"><b>Nombor Akaun Kami</b></p><br><br>
+			<p class="{{$font}}">Nama Akaun: Surau Al-Hikmah</p><br><br>
 			<p class="{{$font}}">Bank: CIMB Islamik</p><br><br>
+			<p class="{{$font}}">Cawangan: 86-0059182-9</p><br><br>
+
 </div>
 		  <form class="contact-form" action="{{url('incomingdonation')}}" method="post">
 					{{ csrf_field() }}

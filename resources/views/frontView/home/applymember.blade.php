@@ -41,7 +41,7 @@
     $i=0;
      ?>
     <div class="panel-body">
-				<h2 class="{{$font}}">Apply For Membership</h2><br>
+				<h2 class="{{$font}}">Mohon Keahlian</h2><br>
 
 
 					<form class="contact-form" action="{{url('newMember')}}" method="post">

@@ -44,7 +44,7 @@
     <div class="panel-body">
     <h2 style="color: green;">{{Session::get('success')}}</h2>
 
-				<h2 class="{{$font}}">Apply For Membership</h2><br>
+				<h2 class="{{$font}}">Mohon Keahlian</h2><br>
 
 
 					<form class="contact-form" action="{{url('newMember')}}" method="post">
@@ -93,7 +93,7 @@
     $i=0;
      ?>
     <div class="panel-body">
-        <h2 class="{{$font}}" >Members List</h2>
+        <h2 class="{{$font}}" >Senarai Ahli</h2>
 
     <input type="text" id="myInput" onkeyup="myFunction()" 
     placeholder="Search for names.." title="Type in a name" style="">
@@ -104,7 +104,7 @@
                                 <thead>
                                     <tr>
                                         <th class="{{$font}}">SI.</th>
-                                        <th class="{{$font}}">Member Name</th>
+                                        <th class="{{$font}}">Nama Ahli</th>
                                         <!-- <th class="{{$font}}">Mobile</th> -->
                                         <th class="{{$font}}">Email</th>
                                         <!-- <th class="{{$font}}">Address</th> -->
