@@ -399,6 +399,7 @@ class FrontController extends Controller
                   $items = DB::table('items')
               
                   ->where('items.user_id', $museum_id)
+                  ->orderBy('created_at', 'desc')
                   ->paginate(9);
           
                   $theme = $user->theme;
@@ -417,6 +418,7 @@ class FrontController extends Controller
                   $items = DB::table('items')
                 
                   ->where('items.user_id', Auth::id())
+                  ->orderBy('created_at', 'desc')
                   ->paginate(9);
                   if(DB::table('contacts')->where('user_id')->exists()){
 
