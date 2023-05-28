@@ -36,7 +36,7 @@ class LectureController extends Controller
 
         $lecture->save();
 
-        return redirect('/lecture/entry')->with('message','Data insert successfully.');
+        return redirect('/lecture/manage')->with('message','Data insert successfully.');
 
 
 
@@ -104,6 +104,8 @@ class LectureController extends Controller
         $font = $user->font;
         $textcolor = $user->textcolor;
         $categories = category::all();
+        $lecture = DB::table('lectures')->orderBy('created_at', 'desc')->paginate(9);
+
         $footimg = $user->footimg;
         return view('frontView.home.video', compact('lecture','theme','logo','font','textcolor','categories','footimg','contacts'));
 
@@ -125,6 +127,8 @@ class LectureController extends Controller
         $font = $user->font;
         $textcolor = $user->textcolor;
         $categories = category::all();
+        $lecture = DB::table('lectures')->orderBy('created_at', 'desc')->paginate(9);
+
         $footimg = $user->footimg;
         return view('frontView.home.video', compact('lecture','contacts','theme','logo','font','textcolor','categories','footimg'));
       }

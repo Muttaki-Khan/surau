@@ -60,7 +60,6 @@ class ThemeController extends Controller
 
         $user = Auth::id();
         $logo = DB::table('users')->where('id', $user)->update(['logo' => $request->logo]);
-
         $pictureInfo = $request->file('logo');
 
         $logoName = $user.$pictureInfo->getClientOriginalName();
@@ -70,7 +69,6 @@ class ThemeController extends Controller
         $pictureInfo->move($folder,$logoName);
 
         $picUrl= $folder.$logoName;
-
         $logoPic = User::find($user);
 
         $logoPic->logo=$picUrl;

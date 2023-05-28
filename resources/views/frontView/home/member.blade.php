@@ -72,7 +72,7 @@
 								</div>
 						
 								<div class="form-group">
-								<button type="submit" class="primary-btn mt-30 text-uppercase">Send Request</button>
+								<button type="submit" class="primary-btn mt-30 text-uppercase">Hantar Permohonan</button>
 								</div>
 							</div>
 						
@@ -96,7 +96,7 @@
         <h2 class="{{$font}}" >Senarai Ahli</h2>
 
     <input type="text" id="myInput" onkeyup="myFunction()" 
-    placeholder="Search for names.." title="Type in a name" style="">
+    placeholder="mencari nama.." title="Type in a name" style="">
 
     <!-- <a href="applymember"><button type="button" class="btn btn-primary">Apply For Membership</button></a> -->
 

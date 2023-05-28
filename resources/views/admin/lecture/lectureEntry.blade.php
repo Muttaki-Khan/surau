@@ -22,7 +22,7 @@
                                             <textarea class="form-control" name="video_title" placeholder="Enter Title"> </textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label>Lecturer Name</label>
+                                            <label>Lecturer Name - 00/00/2023</label>
                                             <textarea class="form-control" name="lecturer_name" placeholder="Enter Name"> </textarea>
                                         </div> 
                                         <div class="form-group">

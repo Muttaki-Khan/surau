@@ -77,7 +77,7 @@
 					
 					
 							<div class="form-group">
-							<button type="submit" class="primary-btn mt-30 text-uppercase">Send Message</button>
+							<button type="submit" class="primary-btn mt-30 text-uppercase">Hantar Mesej</button>
 							</div>
 						</div>
 					
@@ -102,7 +102,7 @@
 
 		  <h2 class="{{$font}}">Memohon Pembiayaan</h2><br>
 		  <h3 class="{{$font}}">Muat turun borang di bawah atau mohon melalui laman web kami</h3><br>
-		  <a type="button" href="{{ url('/donation/download/?file=FORM.pdf')}}" class="btn btn-success">Download Form</a><br><br>
+		  <a type="button" href="{{ url('/donation/download/?file=FORM.pdf')}}" class="btn btn-success">Muat Turun Borang</a><br><br>
 </div>
 
 		  <form class="contact-form" action="{{url('newDonation')}}" method="post">
@@ -154,7 +154,7 @@
 
 							
 							<div class="form-group">
-							<button  type="submit" class="primary-btn mt-30 text-uppercase">Apply Request</button>
+							<button  type="submit" class="primary-btn mt-30 text-uppercase">Pohon Permintaan</button>
 							</div>
 						</div>
 					

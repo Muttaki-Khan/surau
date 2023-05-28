@@ -399,7 +399,7 @@ class FrontController extends Controller
                   $items = DB::table('items')
               
                   ->where('items.user_id', $museum_id)
-                  ->paginate(100);
+                  ->paginate(9);
           
                   $theme = $user->theme;
                   $logo = $user->logo;
@@ -417,7 +417,7 @@ class FrontController extends Controller
                   $items = DB::table('items')
                 
                   ->where('items.user_id', Auth::id())
-                  ->paginate(100);
+                  ->paginate(9);
                   if(DB::table('contacts')->where('user_id')->exists()){
 
                     $contacts = DB::table('contacts')->where('user_id',Auth::id())->first();

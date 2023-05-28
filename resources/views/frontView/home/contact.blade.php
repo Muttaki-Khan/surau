@@ -106,7 +106,7 @@
 						
 							<div class="col-lg-12 d-flex justify-content-end">
 								<div class="form-group">
-								<button type="submit" class="primary-btn mt-30 text-uppercase">Menghantar Mesej</button>
+								<button type="submit" class="primary-btn mt-30 text-uppercase">Hantar Mesej</button>
 								</div>
 							</div>
 						

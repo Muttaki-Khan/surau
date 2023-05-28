@@ -64,6 +64,8 @@
                 </div>     
             </div>
         </div>
+        {{$items->links()}}
+
 	<br><br><br><br>        
     </section>       
 @endsection

@@ -39,7 +39,7 @@
             <div class="containerv pb-lg-5">
 
             <input type="text" id="Search" onkeyup="myFunction2()" 
-            placeholder="Search for title.." title="Type in a name" style="">
+            placeholder="cari tajuk.." title="Type in a name" style="">
     
     <div class="row">
 
@@ -77,6 +77,7 @@
                 
             </div>
         </div>
+        {{$lecture->links()}}
 
 
 	<br><br><br><br>
