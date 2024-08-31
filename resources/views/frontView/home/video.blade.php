@@ -45,7 +45,7 @@
 
 @foreach ($lecture as $video)
 
-<div class="col-lg-4 col-md-6 item">
+<div class="col-lg-3 col-md-6 item">
 <div class="target">
 
                    <div class="card">
@@ -16582,6 +16582,7 @@ button.owl-next {
 
 .w3l-offered-courses .course-title a {
     color: #fff;
+    line-height: 20px;
     font-size: 25px;
     font-weight: 700;
 }

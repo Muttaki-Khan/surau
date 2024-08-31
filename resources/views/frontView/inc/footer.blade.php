@@ -113,11 +113,17 @@
     padding: 0px;
 }
 .footer-section {
-  background: white;
+  background: #061C3D;
+  padding-top: 40px;
   position: relative;
 }
+.footer-section * {
+  color: white !important;
+}
+
 .footer-cta {
-  border-bottom: 3px solid #373636;
+  border-bottom: 3px solid #031126;
+  margin-bottom: 40px;
 }
 .single-cta i {
   color:  #71706E;
@@ -137,6 +143,9 @@
 }
 .cta-text span {
   color: black;
+  line-height: 12px;
+  padding-top: 12px;
+  display: inline-block;
   font-size: 15px;
 }
 .footer-content {
@@ -161,7 +170,7 @@
   margin-bottom: 14px;
   font-size: 14px;
       color: black;
-  line-height: 28px;
+
 }
 .footer-social-icon span {
   color: black;
@@ -212,7 +221,7 @@
   display: inline-block;
   float: left;
   width: 50%;
-  margin-bottom: 12px;
+  margin-bottom: 19px;
 }
 .footer-widget ul li a:hover{
   color:#71706E;
@@ -246,7 +255,7 @@
   transform: rotate(-6deg);
 }
 .copyright-area{
-  background: #202020;
+  background: #031126;
   padding: 20px 0;
 }
 .copyright-text p {
