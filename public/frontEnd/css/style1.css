@@ -57,7 +57,7 @@ input[type="button"],input[type="submit"]{
 
 h1,h2,h3,h4,h5,h6{
 	margin:0;
-	font-family: "Times New Roman", Times, serif;
+	/* font-family: "Times New Roman", Times, serif; */
 }	
 p{
 	margin:0;
@@ -802,6 +802,7 @@ top: 9%;
 /*-- footer --*/
 .footer{
     padding: 70px 0;
+	background-color: #030114;
 	border-top:1px solid #f1f1f1;
 }
 .footer-left p{

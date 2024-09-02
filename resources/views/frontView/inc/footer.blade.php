@@ -6,8 +6,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/solid.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/light.css') }}">
 <script src="https://kit.fontawesome.com/80814ea992.js" crossorigin="anonymous"></script>
-<footer class="footer-section">
-        <div class="container">
+<footer class="footer-section" >
+        <div class="container {{$font}} "  id="themeID">
             <div class="footer-cta pt-5 pb-5">
                 <div class="row">
                     <div class="col-xl-4 col-md-4 mb-30">
@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p style="color:white">Copyright &copy; 2022, All Right Reserved <a href="">Muttaki</a></p>
+                            <p style="color:white">Copyright &copy; 2024, All Right Reserved <a href="">Surau Al-Hikmah Subang Bestari</a></p>
                         </div>
                     </div>
                     
