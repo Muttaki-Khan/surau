@@ -86,9 +86,21 @@
 @section('mainContent')
 <section class="contact-area section-gap">
 
+<div class="soft_new_arrivals" style="padding: 10px">
+	<div class="container">
+		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>TAJWEED </span></h3>
+		<p>Click Here
+		<a href="{{ url('Tajweed.html') }}" target="_blank">
+    	<img src="{{ url('icon.png') }}" alt="Open Tajweed HTML" style="width: 150px; height: 150px;">
+		</a></p>
+		
+	</div>
+</div>
+
 <div class="soft_new_arrivals">
 	<div class="container">
 		<h3 class="{{$font}}" style="font-size:1.8vw;"><span>Aktiviti </span></h3>
+		
 		<div class="new_grids">
 		
 
